@@ -1,0 +1,112 @@
+<include file="Public:header" />
+<article class="header question">
+</article>
+
+<div class="main question register">
+    <div class="container" style="max-width:960px">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h2 class="text-center">用户登录</h2></div>
+            <?php if(isset($error)) { ?>		
+				<div class="alert alert-danger" role="alert">
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  <div id="fail"><?php echo $error; ?></div>
+				</div>		
+			<?php } ?>
+            <div class="panel-body">
+	            <form class="register" method="post" action="{:U('/login')}">
+	                <div class="form-horizontal">
+	                    <!--用户名-->
+	                    <div class="form-group">
+	                        <label for="inputEmail1" class="col-sm-4 control-label">用户名：</label>
+	                        <div class="col-sm-4">
+	                            <input type="text" name="uname" value="{$uname}" class="form-control" id="inputEmail1" placeholder="用户名">
+	                        </div>
+	                        <p class="col-sm-4"></p>
+	                    </div>
+	                    <!--密码-->
+	                    <div class="form-group">
+	                        <label for="inputEmail2" class="col-sm-4 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+	                        <div class="col-sm-4">
+	                            <input type="password" name="pwd" value="{$pwd}" class="form-control" id="inputEmail2" placeholder="密码">
+	                        </div>
+	                        <p class="col-sm-4"></p>
+	                    </div>
+	                    <!--验证码-->
+	                    <div class="form-group">
+	                        <label for="inputEmail2" class="col-sm-4 control-label">验证码：</label>
+	                        <div class="col-sm-2">
+	                            <input type="text" name="code" class="form-control" id="inputEmail3" placeholder="验证码">
+	                        </div>
+	                        <p class="col-sm-4">
+	                        	<img class="verifyimg reloadverify" alt="点击切换" src="{:U('Public/verify')}" width="120">
+	                        </p>
+	                    </div>
+	                    <div class="form-group">
+	                        <div class="col-sm-4">
+	                        </div>
+	                        <div class="col-sm-4">
+	                            <label><a href="{:U('/forgot')}"><span>&nbsp;&nbsp;忘记密码</span></a></label>
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <div class="col-sm-4">
+	                        </div>
+	                        <div class="col-sm-4">
+	                            <input type="submit" value="登录" class="btn btn-primary col-lg-offset-6" />
+	                        </div>
+	                    </div>
+	                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="foot">
+    <div class="top">
+        <ul class="clearfix">
+            <li><a href="">关于我们</a><span>|</span></li>
+            <li><a href="">产品中心</a><span>|</span></li>
+            <li><a href="">动态专栏</a><span>|</span></li>
+            <li><a href="">联系我们</a><span>|</span></li>
+            <li><a href="">友情链接</a></li>
+        </ul>
+        <p>
+            <span>上海</span>
+            <span>无锡</span>
+            <span>济南</span>
+            <span>武汉</span>
+            <span>广州</span>
+        </p>
+    </div>
+    <div class="center">
+        <img src="__RES__/images/senmous-img.jpg" alt="">
+    </div>
+    <div class="bootom">
+        © 2015 NEXTEV LIMITED All Rights Reserved 沪ICP备15026264号-1
+    </div>
+</div>
+
+<script src="__RES__/js/jquery.min.js"></script>
+<script src="__RES__/js/bootstrap.js"></script>
+
+
+<style>
+	.verifyimg{cursor:pointer;}
+</style>
+<script>
+	//刷新验证码
+	var verifyimg = $(".verifyimg").attr("src");
+    $(".reloadverify").click(function(){
+        if( verifyimg.indexOf('?')>0){
+            $(".verifyimg").attr("src", verifyimg+'&random='+Math.random());
+        }else{
+            $(".verifyimg").attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+        }
+    });	
+</script>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<include file="Public:header" />
+
+<article class="header news"></article>
+
+<div class="main question blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-4"></div>
+            <div class="col-md-4 col-lg-4 text-center"><h2>公司公告</h2></div>
+            <div class="col-md-4 col-lg-4"></div>
+        </div>
+        <div id="user">
+            <volist name="ne" id="vo">
+                <div class="row new-list">
+                    <a href="{:U('/newsdetail/'.$vo['news_id'])}" target="_blank" title="{$vo.title}">
+                        <div class="col-sm-2">
+                            <h5>{$vo.date|msubstr=5,5,'utf-8',false}</h5>
+                            <h6>{$vo.date|msubstr=0,4,'utf-8',false}</h6>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="__ROOT__/uploads/image/{$vo.image}" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <dl>
+                                <dt>{$vo.title}</dt>
+                                <dd>{$vo.summary}</dd>
+                            </dl>
+                        </div>
+                    </a>
+                </div>
+            </volist>
+            <nav aria-label="Page navigation" style="text-align:center">
+                <ul class="pagination">
+                    {$page}
+                </ul>
+            </nav>
+        </div>
+        <script type="text/javascript">
+            function user(id){    //page函数名 一定要和action中的第三个参数一致上面有
+                var id = id;
+                // var pan_cid="<?php echo $pan_cid;?>";
+                // alert(pan_cid);,'cid':pan_cid
+                $.get('indexnews',{'p':id},function(data){
+                    $("#user").replaceWith("<div id='user'>"+data+"</div>"); 
+                });
+            }
+        </script>
+    </div>
+    
+</div>
+
+<include file="Public:footer" />
+
+</body>
+</html>

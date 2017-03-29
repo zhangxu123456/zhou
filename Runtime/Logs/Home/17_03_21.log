@@ -1,0 +1,2732 @@
+[ 2017-03-21T13:33:24+08:00 ] ::1 /theguide/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001406s ]
+NOTIC: [8] Use of undefined constant data - assumed 'data' E:\wamp\www\theguide\Modules\Lib\Taobaoip.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `theguide_visitors_ip` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `theguide_visitors_ip` WHERE `ip` = '0.0.0.0' LIMIT 1   [ RunTime:0.0025s ]
+SQL: INSERT INTO `theguide_visitors_ip` (`province`,`city`,`ip`,`last_visit_time`,`add_time`,`user_agent`) VALUES ('','','0.0.0.0','2017-03-21','2017-03-21 13:33:24','Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.19 Safari/537.36') [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `theguide_principle` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `theguide_principle_image` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_principle`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 35  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 36  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_advantage` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `theguide_advantage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001756s ]
+
+[ 2017-03-21T13:36:30+08:00 ] ::1 /theguide/goods/g6nyzx239w.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+SQL: select * from theguide_goods [ RunTime:0.0007s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =2 [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `theguide_goods_description` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `theguide_goods`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_goods_description` WHERE `goods_id` = 25  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 119 行.
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016856s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000942s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001004s ]
+
+[ 2017-03-21T13:36:30+08:00 ] ::1 /theguide/goods/Uploads/image/cache/shop/58ad4e6f76234-16x16.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-03-21T13:36:32+08:00 ] ::1 /theguide/cart_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001401s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `theguide_goods` WHERE `goods_id` = 25 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `quantity` FROM `theguide_goods` WHERE `goods_id` = 25 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =25 [ RunTime:0.0003s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0014s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=2 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0041s ]
+
+[ 2017-03-21T13:36:33+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0006s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=2 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0004s ]
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0005s ]
+NOTIC: [2] Division by zero E:\wamp\www\theguide\Modules\Lib\Weight.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019422s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019579s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001670s ]
+
+[ 2017-03-21T13:36:59+08:00 ] ::1 /theguide/checkout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0006s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=2 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000228s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031741s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000794s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001129s ]
+
+[ 2017-03-21T13:36:59+08:00 ] ::1 /theguide/c_login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2017-03-21T13:36:59+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001053s ]
+
+[ 2017-03-21T15:23:38+08:00 ] ::1 /theguide/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+NOTIC: [8] Use of undefined constant data - assumed 'data' E:\wamp\www\theguide\Modules\Lib\Taobaoip.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `theguide_visitors_ip` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_visitors_ip` WHERE `ip` = '0.0.0.0' LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `theguide_visitors_ip` (`province`,`city`,`ip`,`last_visit_time`,`add_time`,`user_agent`) VALUES ('','','0.0.0.0','2017-03-21','2017-03-21 15:23:38','Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.19 Safari/537.36') [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `theguide_principle` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `theguide_principle_image` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `theguide_principle`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 35  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 36  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_advantage` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_advantage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000999s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001059s ]
+
+[ 2017-03-21T15:26:10+08:00 ] ::1 /theguide/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+SQL: SHOW COLUMNS FROM `theguide_principle` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `theguide_principle_image` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `theguide_principle`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 35  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 36  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_advantage` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `theguide_advantage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017560s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000984s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001045s ]
+
+[ 2017-03-21T15:26:31+08:00 ] ::1 /theguide/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001513s ]
+SQL: SHOW COLUMNS FROM `theguide_principle` [ RunTime:0.0211s ]
+SQL: SHOW COLUMNS FROM `theguide_principle_image` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `theguide_principle`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 35  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 36  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `theguide_advantage` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `theguide_advantage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016529s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000993s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001069s ]
+
+[ 2017-03-21T15:26:33+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+
+[ 2017-03-21T15:26:33+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012729s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001099s ]
+
+[ 2017-03-21T15:26:34+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001426s ]
+
+[ 2017-03-21T15:26:36+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+
+[ 2017-03-21T15:26:36+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000963s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001025s ]
+
+[ 2017-03-21T15:26:36+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001139s ]
+
+[ 2017-03-21T15:26:40+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+
+[ 2017-03-21T15:26:40+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2017-03-21T15:26:40+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001561s ]
+
+[ 2017-03-21T15:26:41+08:00 ] ::1 /theguide/question.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `theguide_question` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `theguide_question`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013361s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001113s ]
+
+[ 2017-03-21T15:26:42+08:00 ] ::1 /theguide/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 52 行.
+SQL: select * from theguide_goods [ RunTime:0.0004s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =0 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `theguide_goods_description` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_goods`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_goods_description` WHERE `goods_id` = 25  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 119 行.
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016848s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001071s ]
+
+[ 2017-03-21T15:26:44+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+
+[ 2017-03-21T15:26:44+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001027s ]
+
+[ 2017-03-21T15:26:44+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001557s ]
+
+[ 2017-03-21T15:26:47+08:00 ] ::1 /theguide/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `theguide_principle` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `theguide_principle_image` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_principle`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 35  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 36  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_advantage` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `theguide_advantage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001022s ]
+
+[ 2017-03-21T15:26:54+08:00 ] ::1 /theguide/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000298s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 82 行.
+NOTIC: [8] Undefined variable: name E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 90 行.
+NOTIC: [8] Undefined variable: id_card E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 98 行.
+NOTIC: [8] Undefined variable: referee_code E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 106 行.
+NOTIC: [8] Undefined variable: email E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 114 行.
+NOTIC: [8] Undefined variable: address E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 152 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 161 行.
+NOTIC: [8] Undefined variable: repwd E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 169 行.
+NOTIC: [8] Undefined variable: telephone E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 177 行.
+NOTIC: [8] Undefined index: send_code E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 196 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 283 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 289 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\theguide\Runtime\Cache\Home\a71485ede0efa7b12450f524363cd057.php 第 295 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001144s ]
+
+[ 2017-03-21T15:26:54+08:00 ] ::1 /theguide/__UPLOAD__/image/regimage/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+
+[ 2017-03-21T15:26:55+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000951s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001017s ]
+
+[ 2017-03-21T15:26:55+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001268s ]
+
+[ 2017-03-21T15:26:56+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-21T15:26:58+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+
+[ 2017-03-21T15:26:58+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013881s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000971s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001033s ]
+
+[ 2017-03-21T15:26:58+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001452s ]
+
+[ 2017-03-21T15:27:12+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001116s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000973s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001035s ]
+
+[ 2017-03-21T15:27:12+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001600s ]
+
+[ 2017-03-21T15:27:13+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+
+[ 2017-03-21T15:27:13+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001043s ]
+
+[ 2017-03-21T15:27:14+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001156s ]
+
+[ 2017-03-21T15:27:27+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `theguide_member` WHERE `uname` = 'senmons' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0045s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('网站会员','3','senmons','2017-03-21 15:27:27','登录了网站') [ RunTime:0.0023s ]
+NOTIC: [8] Use of undefined constant data - assumed 'data' E:\wamp\www\theguide\Modules\Lib\Taobaoip.class.php 第 30 行.
+SQL: UPDATE `theguide_member` SET `last_login_time`='1490081247',`login_count`=login_count+1,`last_login_ip`='0.0.0.0',`last_ip_region`='-' WHERE `member_id` = 3 [ RunTime:0.0055s ]
+
+[ 2017-03-21T15:27:27+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000985s ]
+
+[ 2017-03-21T15:27:29+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001052s ]
+
+[ 2017-03-21T15:27:34+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0212s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001088s ]
+
+[ 2017-03-21T15:27:37+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+
+[ 2017-03-21T15:27:40+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+
+[ 2017-03-21T15:27:46+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+
+[ 2017-03-21T15:28:03+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+
+[ 2017-03-21T15:28:04+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+
+[ 2017-03-21T15:32:52+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001533s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000281s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017595s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001499s ]
+
+[ 2017-03-21T15:32:52+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+
+[ 2017-03-21T15:32:53+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+
+[ 2017-03-21T15:32:56+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+
+[ 2017-03-21T15:32:58+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0211s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000259s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-03-21T15:32:58+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+
+[ 2017-03-21T15:33:00+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000801s ]
+
+[ 2017-03-21T15:33:02+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+
+[ 2017-03-21T15:33:03+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+
+[ 2017-03-21T15:33:03+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+
+[ 2017-03-21T15:35:22+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000941s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-03-21T15:35:22+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+
+[ 2017-03-21T15:35:24+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+
+[ 2017-03-21T15:35:26+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000909s ]
+
+[ 2017-03-21T15:35:40+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+
+[ 2017-03-21T15:35:41+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+
+[ 2017-03-21T15:43:21+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+
+[ 2017-03-21T15:43:45+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+
+[ 2017-03-21T15:43:45+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000901s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001486s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0219s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000280s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000363s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018237s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000905s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001037s ]
+
+[ 2017-03-21T15:43:46+08:00 ] ::1 /theguide/Themes/Home/default/Public/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+
+[ 2017-03-21T15:43:47+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+
+[ 2017-03-21T15:50:43+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+
+[ 2017-03-21T15:50:45+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000243s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000985s ]
+
+[ 2017-03-21T15:50:46+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+
+[ 2017-03-21T15:50:51+08:00 ] ::1 /theguide/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 52 行.
+SQL: select * from theguide_goods [ RunTime:0.0004s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =0 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0211s ]
+SQL: SHOW COLUMNS FROM `theguide_goods_description` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `theguide_goods`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_goods_description` WHERE `goods_id` = 25  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 119 行.
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000911s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001031s ]
+
+[ 2017-03-21T15:50:54+08:00 ] ::1 /theguide/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000974s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 52 行.
+SQL: select * from theguide_goods [ RunTime:0.0005s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =0 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `theguide_goods_description` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `theguide_goods`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `theguide_goods_description` WHERE `goods_id` = 25  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 119 行.
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016959s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001234s ]
+
+[ 2017-03-21T15:50:55+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000932s ]
+
+[ 2017-03-21T15:51:24+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001881s ]
+
+[ 2017-03-21T15:51:29+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+
+[ 2017-03-21T15:51:31+08:00 ] ::1 /theguide/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001483s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 52 行.
+SQL: select * from theguide_goods [ RunTime:0.0006s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =0 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0094s ]
+SQL: SHOW COLUMNS FROM `theguide_goods_description` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `theguide_goods`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `theguide_goods_description` WHERE `goods_id` = 25  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000275s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000408s ]
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 119 行.
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000967s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001067s ]
+
+[ 2017-03-21T15:51:32+08:00 ] ::1 /theguide/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001584s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 52 行.
+SQL: select * from theguide_goods [ RunTime:0.0004s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =0 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0216s ]
+SQL: SHOW COLUMNS FROM `theguide_goods_description` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `theguide_goods`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_goods_description` WHERE `goods_id` = 25  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000452s ]
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 119 行.
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019131s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000958s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001230s ]
+
+[ 2017-03-21T15:51:34+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+
+[ 2017-03-21T15:52:08+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001377s ]
+
+[ 2017-03-21T15:52:09+08:00 ] ::1 /theguide/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 52 行.
+SQL: select * from theguide_goods [ RunTime:0.0004s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =0 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0216s ]
+SQL: SHOW COLUMNS FROM `theguide_goods_description` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_goods`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_goods_description` WHERE `goods_id` = 25  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 119 行.
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016740s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000973s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2017-03-21T15:52:10+08:00 ] ::1 /theguide/news.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `theguide_news` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_news` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `theguide_news` ORDER BY date desc LIMIT 0,4   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+NOTIC: [8] Undefined variable: pan_cid E:\wamp\www\theguide\Runtime\Cache\Home\8f9566dde4a7283497dc19f9e9c81ef2.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016785s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001145s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001218s ]
+
+[ 2017-03-21T15:52:11+08:00 ] ::1 /theguide/question.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+SQL: SHOW COLUMNS FROM `theguide_question` [ RunTime:0.0212s ]
+SQL: SELECT * FROM `theguide_question`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001161s ]
+
+[ 2017-03-21T15:52:12+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+
+[ 2017-03-21T15:52:17+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001713s ]
+
+[ 2017-03-21T15:52:33+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001331s ]
+
+[ 2017-03-21T15:52:34+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001602s ]
+
+[ 2017-03-21T15:53:30+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000794s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+
+[ 2017-03-21T15:53:31+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001338s ]
+
+[ 2017-03-21T15:53:47+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+
+[ 2017-03-21T15:53:49+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+
+[ 2017-03-21T15:54:29+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001446s ]
+
+[ 2017-03-21T15:54:29+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001450s ]
+
+[ 2017-03-21T15:54:30+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001465s ]
+
+[ 2017-03-21T15:54:30+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001521s ]
+
+[ 2017-03-21T15:54:31+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001369s ]
+
+[ 2017-03-21T15:54:31+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-03-21T15:54:32+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+
+[ 2017-03-21T15:54:32+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001487s ]
+
+[ 2017-03-21T15:54:32+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+
+[ 2017-03-21T15:54:33+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001569s ]
+
+[ 2017-03-21T15:54:33+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+
+[ 2017-03-21T15:54:33+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+
+[ 2017-03-21T15:55:04+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001342s ]
+
+[ 2017-03-21T15:55:04+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001698s ]
+
+[ 2017-03-21T15:55:04+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+
+[ 2017-03-21T15:55:05+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+
+[ 2017-03-21T15:55:05+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+
+[ 2017-03-21T15:55:06+08:00 ] ::1 /theguide/checkout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+
+[ 2017-03-21T15:55:06+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001254s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001325s ]
+
+[ 2017-03-21T15:55:06+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001028s ]
+
+[ 2017-03-21T15:55:07+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+
+[ 2017-03-21T15:55:08+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001352s ]
+
+[ 2017-03-21T15:55:08+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001559s ]
+
+[ 2017-03-21T15:56:20+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016888s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001076s ]
+
+[ 2017-03-21T15:56:20+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001099s ]
+
+[ 2017-03-21T15:56:21+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000951s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001013s ]
+
+[ 2017-03-21T15:56:21+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017654s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000946s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001009s ]
+
+[ 2017-03-21T15:56:22+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001058s ]
+
+[ 2017-03-21T15:56:22+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001017s ]
+
+[ 2017-03-21T15:56:25+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+
+[ 2017-03-21T15:57:18+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001989s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022047s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001241s ]
+
+[ 2017-03-21T15:57:19+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+
+[ 2017-03-21T15:59:08+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000999s ]
+
+[ 2017-03-21T15:59:10+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001890s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019420s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000971s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001031s ]
+
+[ 2017-03-21T15:59:11+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-03-21T16:01:47+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002291s ]
+
+[ 2017-03-21T16:01:48+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+
+[ 2017-03-21T16:01:49+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+
+[ 2017-03-21T16:01:51+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+
+[ 2017-03-21T16:01:53+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+
+[ 2017-03-21T16:01:55+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+
+[ 2017-03-21T16:01:59+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+
+[ 2017-03-21T16:02:38+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+
+[ 2017-03-21T16:02:38+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+
+[ 2017-03-21T16:02:41+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+
+[ 2017-03-21T16:02:42+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+
+[ 2017-03-21T16:04:03+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+
+[ 2017-03-21T16:04:05+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+
+[ 2017-03-21T16:05:11+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+
+[ 2017-03-21T16:05:29+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+
+[ 2017-03-21T16:06:28+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+
+[ 2017-03-21T16:06:45+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001541s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020031s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001163s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001256s ]
+
+[ 2017-03-21T16:06:46+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031212s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031358s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000960s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001031s ]
+
+[ 2017-03-21T16:06:48+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000958s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001030s ]
+
+[ 2017-03-21T16:06:49+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001417s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0214s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016866s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000959s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001041s ]
+
+[ 2017-03-21T16:06:50+08:00 ] ::1 /theguide/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+
+[ 2017-03-21T16:06:51+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+NOTIC: [8] Use of undefined constant data - assumed 'data' E:\wamp\www\theguide\Modules\Lib\Taobaoip.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `theguide_visitors_ip` [ RunTime:0.0213s ]
+SQL: SELECT * FROM `theguide_visitors_ip` WHERE `ip` = '0.0.0.0' LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `theguide_visitors_ip` (`province`,`city`,`ip`,`last_visit_time`,`add_time`,`user_agent`) VALUES ('','','0.0.0.0','2017-03-21','2017-03-21 16:06:51','Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.19 Safari/537.36') [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001043s ]
+
+[ 2017-03-21T16:06:51+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001189s ]
+
+[ 2017-03-21T16:06:52+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000853s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000966s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001063s ]
+
+[ 2017-03-21T16:06:55+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001064s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017693s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001107s ]
+
+[ 2017-03-21T16:06:57+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001632s ]
+
+[ 2017-03-21T16:07:09+08:00 ] ::1 /theguide/news.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+SQL: SHOW COLUMNS FROM `theguide_news` [ RunTime:0.0212s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_news` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_news` ORDER BY date desc LIMIT 0,4   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] Undefined variable: pan_cid E:\wamp\www\theguide\Runtime\Cache\Home\8f9566dde4a7283497dc19f9e9c81ef2.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015578s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015655s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001179s ]
+
+[ 2017-03-21T16:07:10+08:00 ] ::1 /theguide/question.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `theguide_question` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_question`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000987s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001050s ]
+
+[ 2017-03-21T16:07:11+08:00 ] ::1 /theguide/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 52 行.
+SQL: select * from theguide_goods [ RunTime:0.0004s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =0 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `theguide_goods_description` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `theguide_goods`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_goods_description` WHERE `goods_id` = 25  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 119 行.
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014575s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000833s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000898s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000958s ]
+
+[ 2017-03-21T16:07:12+08:00 ] ::1 /theguide/news.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+SQL: SHOW COLUMNS FROM `theguide_news` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_news` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_news` ORDER BY date desc LIMIT 0,4   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined variable: pan_cid E:\wamp\www\theguide\Runtime\Cache\Home\8f9566dde4a7283497dc19f9e9c81ef2.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014517s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014604s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000848s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2017-03-21T16:07:13+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000816s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001030s ]
+
+[ 2017-03-21T16:28:36+08:00 ] ::1 /theguide/contact.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015987s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001039s ]
+
+[ 2017-03-21T16:51:55+08:00 ] ::1 /theguide/news.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001092s ]
+SQL: SHOW COLUMNS FROM `theguide_news` [ RunTime:0.0212s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_news` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_news` ORDER BY date desc LIMIT 0,4   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+NOTIC: [8] Undefined variable: pan_cid E:\wamp\www\theguide\Runtime\Cache\Home\8f9566dde4a7283497dc19f9e9c81ef2.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001017s ]
+
+[ 2017-03-21T16:51:58+08:00 ] ::1 /theguide/question.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `theguide_question` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `theguide_question`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000942s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2017-03-21T16:51:59+08:00 ] ::1 /theguide/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 52 行.
+SQL: select * from theguide_goods [ RunTime:0.0005s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =0 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0212s ]
+SQL: SHOW COLUMNS FROM `theguide_goods_description` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `theguide_goods`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_goods_description` WHERE `goods_id` = 25  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 119 行.
+NOTIC: [8] Use of undefined constant lv - assumed 'lv' E:\wamp\www\theguide\Runtime\Cache\Home\509a1cf4dc2486882b63d523ae639424.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000897s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000984s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001052s ]
+
+[ 2017-03-21T16:59:53+08:00 ] ::1 /theguide/cart_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001463s ]
+SQL: SHOW COLUMNS FROM `theguide_goods` [ RunTime:0.0213s ]
+SQL: SELECT * FROM `theguide_goods` WHERE `goods_id` = 25 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `quantity` FROM `theguide_goods` WHERE `goods_id` = 25 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM theguide_goods_option po LEFT JOIN theguide_option o ON po.option_id = o.option_id WHERE po.goods_id =25 [ RunTime:0.0003s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0004s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=1 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0003s ]
+
+[ 2017-03-21T16:59:53+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001043s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0005s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=1 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0003s ]
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0004s ]
+NOTIC: [2] Division by zero E:\wamp\www\theguide\Modules\Lib\Weight.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019431s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001004s ]
+
+[ 2017-03-21T16:59:55+08:00 ] ::1 /theguide/checkout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0005s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=1 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031276s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000890s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2017-03-21T16:59:55+08:00 ] ::1 /theguide/c_login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000875s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2017-03-21T16:59:55+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001011s ]
+
+[ 2017-03-21T17:00:06+08:00 ] ::1 /theguide/validate_login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000921s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `theguide_member` WHERE `uname` = 'senmons' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `theguide_member` SET `last_login_time`='1490086806',`login_count`=login_count+1,`last_login_ip`='0.0.0.0' WHERE `member_id` = 3 [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0046s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('网站会员','3','senmons','2017-03-21 17:00:06','登录了网站') [ RunTime:0.0018s ]
+
+[ 2017-03-21T17:00:06+08:00 ] ::1 /theguide/checkout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0006s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=1 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000289s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000378s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016280s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000826s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000946s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001020s ]
+
+[ 2017-03-21T17:00:06+08:00 ] ::1 /theguide/shipping_address.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `theguide_area` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `theguide_area` WHERE ( area_parent_id=0 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0056s ]
+SQL: SELECT DISTINCT province_id,city_id,country_id FROM theguide_address WHERE member_id=3 [ RunTime:0.0012s ]
+SQL: SELECT area_name,area_id FROM theguide_area WHERE area_id IN (0) [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `theguide_address` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `theguide_address` WHERE ( member_id=3 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2017-03-21T17:00:09+08:00 ] ::1 /theguide/validate_shipping_address.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0006s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=1 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0003s ]
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0003s ]
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0003s ]
+NOTIC: [2] Division by zero E:\wamp\www\theguide\Modules\Lib\Weight.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0049s ]
+SQL: SELECT DISTINCT province_id,city_id,country_id FROM theguide_address WHERE member_id=3 [ RunTime:0.0005s ]
+SQL: SELECT area_name,area_id FROM theguide_area WHERE area_id IN (0) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `theguide_address` WHERE ( member_id=3 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_address` WHERE ( address_id=66 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-03-21T17:00:10+08:00 ] ::1 /theguide/shipping_method.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `theguide_transport` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_transport`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_transport` [ RunTime:0.0047s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000971s ]
+
+[ 2017-03-21T17:00:10+08:00 ] ::1 /theguide/shipping_address.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000793s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `theguide_area` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `theguide_area` WHERE ( area_parent_id=0 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0053s ]
+SQL: SELECT DISTINCT province_id,city_id,country_id FROM theguide_address WHERE member_id=3 [ RunTime:0.0007s ]
+SQL: SELECT area_name,area_id FROM theguide_area WHERE area_id IN (0) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_address` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `theguide_address` WHERE ( member_id=3 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008886s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001235s ]
+
+[ 2017-03-21T17:00:11+08:00 ] ::1 /theguide/validate_shipping_method.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0005s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=1 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: shipping_method E:\wamp\www\theguide\Modules\Home\Controller\CheckoutController.class.php 第 432 行.
+
+[ 2017-03-21T17:00:11+08:00 ] ::1 /theguide/payment_method.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM `theguide_payment` [ RunTime:0.0212s ]
+SQL: SELECT * FROM `theguide_payment` WHERE `payment_state` = '1'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000949s ]
+
+[ 2017-03-21T17:00:12+08:00 ] ::1 /theguide/validate_payment_method.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0005s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=1 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_payment` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `theguide_payment` WHERE `payment_code` = 'alipay' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-03-21T17:00:12+08:00 ] ::1 /theguide/confirm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0005s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=1 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_address` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `theguide_address` WHERE `address_id` = 66 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+NOTIC: [8] Undefined index: ms E:\wamp\www\theguide\Runtime\Cache\Home\27129beaae69fa90bcb25ad23c62c8b0.php 第 29 行.
+NOTIC: [8] Undefined variable: sm E:\wamp\www\theguide\Runtime\Cache\Home\27129beaae69fa90bcb25ad23c62c8b0.php 第 47 行.
+NOTIC: [8] Undefined variable: sm E:\wamp\www\theguide\Runtime\Cache\Home\27129beaae69fa90bcb25ad23c62c8b0.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000912s ]
+
+[ 2017-03-21T17:00:15+08:00 ] ::1 /theguide/payment/pay/token/5728055e5ea7fd961acf82c482dd338e.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+SQL: SELECT * FROM theguide_goods p LEFT JOIN theguide_goods_description pd ON (p.goods_id = pd.goods_id) WHERE p.goods_id = 25 AND p.status = 1 [ RunTime:0.0008s ]
+SQL: SELECT price FROM theguide_goods_discount WHERE goods_id = '25' AND quantity <=1 ORDER BY quantity DESC, price ASC LIMIT 1 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0211s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_address` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `theguide_address` WHERE `address_id` = 66 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_transport` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0057s ]
+NOTIC: [8] Use of undefined constant data - assumed 'data' E:\wamp\www\theguide\Modules\Lib\Taobaoip.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0050s ]
+SQL: INSERT INTO `theguide_order` (`member_id`,`order_num_alias`,`name`,`email`,`telephone`,`shipping_name`,`shipping_city_id`,`shipping_country_id`,`shipping_province_id`,`shipping_tel`,`order_status_id`,`ip`,`ip_region`,`date_added`,`total`,`user_agent`,`payment_code`,`address_id`) VALUES ('3','2017032110210049','senmons','senmons@163.com','18930620590','周秋华','0','0','0','18930620590','3','0.0.0.0','-','1490086815','9800','Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.19 Safari/537.36','alipay','66') [ RunTime:0.0035s ]
+SQL: INSERT INTO theguide_order_goods SET order_id = '60',goods_id='25',name='领路者软件',model='',quantity='1',price='9800',total='9800' [ RunTime:0.0025s ]
+SQL: UPDATE theguide_goods SET quantity = (quantity - 1) WHERE goods_id = '25' AND subtract = '1' [ RunTime:0.0045s ]
+SQL: INSERT INTO theguide_order_total SET order_id = '60',code='sub_total',title='商品价格',text='￥9800',value='9800' [ RunTime:0.0023s ]
+SQL: INSERT INTO theguide_order_total SET order_id = '60',code='shipping',title='运费',text='￥',value='0' [ RunTime:0.0022s ]
+SQL: INSERT INTO theguide_order_total SET order_id = '60',code='total',title='总价',text='￥9800',value='9800' [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `theguide_order_history` [ RunTime:0.0062s ]
+SQL: INSERT INTO `theguide_order_history` (`order_id`,`order_status_id`,`date_added`) VALUES ('60','3','1490086815') [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0070s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('网站会员','3','senmons','2017-03-21 17:00:15','下了订单 2017032110210049 未支付') [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `theguide_payment` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `theguide_payment` WHERE `payment_code` = 'alipay' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-03-21T17:00:23+08:00 ] ::1 /theguide/checkout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001264s ]
+
+[ 2017-03-21T17:00:23+08:00 ] ::1 /theguide/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\theguide\Modules\Lib\Cart.class.php 第 88 行.
+SQL: SELECT * FROM theguide_weight_class [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000949s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2017-03-21T17:00:25+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000269s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000833s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
+
+[ 2017-03-21T17:00:26+08:00 ] ::1 /theguide/order.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_order` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT o.order_num_alias as alias,o.order_id,o.name,o.date_added,o.total,os.name as status FROM theguide_order o,theguide_order_status os where o.order_status_id=os.order_status_id and o.member_id=3 order by o.order_id desc LIMIT 0,8 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001177s ]
+
+[ 2017-03-21T17:01:02+08:00 ] ::1 /theguide/atom.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+
+[ 2017-03-21T17:01:09+08:00 ] ::1 /theguide/guide.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+
+[ 2017-03-21T17:01:26+08:00 ] ::1 /theguide/Common/image/ypci.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000751s ]
+

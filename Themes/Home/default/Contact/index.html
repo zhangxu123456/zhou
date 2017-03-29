@@ -1,0 +1,72 @@
+<include file="Public:header" />
+
+<article class="header contact">
+</article>
+
+<div class="main question blog">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4 col-lg-4"></div>
+            <div class="col-md-4 col-lg-4 text-center"><h2>联系我们</h2></div>
+            <div class="col-md-4 col-lg-4"></div>
+        </div>
+
+            <div class="row" style="padding-top:50px;">
+                <div class="col-md-6 form-left">
+                    <form name="form" action="{:U('Common/do_guestbook')}" method="post" onsubmit="return CheckForm(this)" id="form">
+                        <div class="row">
+                            <div class="col-md-2"><label for="exampleInputEmail1">姓名：</label></div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" id="unames" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"><label for="exampleInputEmail2">Email：</label></div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="email" id="emails" placeholder="邮箱">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="exampleInputEmail3">电话:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="phone" id="phones" placeholder="手机号">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="exampleInputEmail3">留言:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <textarea  class="form-control" rows="5" name="content" id="cons" placeholder="内容" ></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary">提 交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 form-right">
+
+                    <p><i class="glyphicon glyphicon-earphone"></i><span>上海：021-63353683</span></p>
+                    <p><i class="glyphicon glyphicon-map-marker"></i><span>地址：上海市黄浦区龙华东路858号海外滩中心办公B座603-604</span></p>
+                    <hr>
+                    <p><i class="glyphicon glyphicon-earphone"></i><span>无锡：021-66926188</span></p>
+                    <p><i class="glyphicon glyphicon-map-marker"></i><span>地址：无锡滨湖区鸿桥路无锡现代国际工业设计大厦912-918</span></p>
+                    <hr>
+                    <p><i class="glyphicon glyphicon-earphone"></i><span>济南：0531-83161411</span></p>
+                    <p><i class="glyphicon glyphicon-map-marker"></i><span>地址：济南市槐荫区绿地中央广场A座1201,1210-1212</span></p>
+                </div>
+            </div>
+
+    </div>
+</div>
+<include file="Public:footer" />
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+[ 2017-03-29T10:27:52+08:00 ] ::1 /theguide/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001454s ]
+NOTIC: [8] Use of undefined constant data - assumed 'data' E:\wamp\www\theguide\Modules\Lib\Taobaoip.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `theguide_visitors_ip` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `theguide_visitors_ip` WHERE `ip` = '0.0.0.0' LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `theguide_visitors_ip` (`province`,`city`,`ip`,`last_visit_time`,`add_time`,`user_agent`) VALUES ('','','0.0.0.0','2017-03-29','2017-03-29 10:27:52','Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.19 Safari/537.36') [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `theguide_principle` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `theguide_principle_image` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `theguide_principle`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 35  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `theguide_principle_image` WHERE `mid` = 36  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_advantage` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `theguide_advantage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001536s ]
+
+[ 2017-03-29T10:40:31+08:00 ] ::1 /theguide/Common/image/ypci.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+
+[ 2017-03-29T10:41:44+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined variable: uname E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 82 行.
+NOTIC: [8] Undefined variable: pwd E:\wamp\www\theguide\Runtime\Cache\Home\e5be969f08deceae0cf150d6cffdf6e8.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013453s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000867s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001041s ]
+
+[ 2017-03-29T10:41:44+08:00 ] ::1 /theguide/public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001393s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001518s ]
+
+[ 2017-03-29T10:41:51+08:00 ] ::1 /theguide/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `theguide_member` WHERE `uname` = 'senmons' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0059s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('网站会员','3','senmons','2017-03-29 10:41:51','登录了网站') [ RunTime:0.0018s ]
+NOTIC: [8] Use of undefined constant data - assumed 'data' E:\wamp\www\theguide\Modules\Lib\Taobaoip.class.php 第 30 行.
+SQL: UPDATE `theguide_member` SET `last_login_time`='1490755311',`login_count`=login_count+1,`last_login_ip`='0.0.0.0',`last_ip_region`='-' WHERE `member_id` = 3 [ RunTime:0.0025s ]
+
+[ 2017-03-29T10:41:51+08:00 ] ::1 /theguide/information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `theguide_member` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000339s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000427s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000995s ]
+
+[ 2017-03-29T10:41:52+08:00 ] ::1 /theguide/order.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_order` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT o.order_num_alias as alias,o.order_id,o.name,o.date_added,o.total,os.name as status FROM theguide_order o,theguide_order_status os where o.order_status_id=os.order_status_id and o.member_id=3 order by o.order_id desc LIMIT 0,8 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_order_goods` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `theguide_code` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `theguide_order` WHERE `order_id` = 217 AND `order_status_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `xuliemas` FROM `theguide_order` WHERE `order_id` = 217 AND `zhuang_state` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `theguide_order` WHERE `order_id` = 216 AND `order_status_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `xuliemas` FROM `theguide_order` WHERE `order_id` = 216 AND `zhuang_state` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8] Use of undefined constant key - assumed 'key' E:\wamp\www\theguide\Runtime\Cache\Home\3e0ea0721a1f26f07c6c355f7a27f4e8.php 第 249 行.
+NOTIC: [8] Undefined index: key E:\wamp\www\theguide\Runtime\Cache\Home\3e0ea0721a1f26f07c6c355f7a27f4e8.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000860s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000921s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000988s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001049s ]
+
+[ 2017-03-29T10:43:41+08:00 ] ::1 /theguide/order.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_order` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT o.order_num_alias as alias,o.order_id,o.name,o.date_added,o.total,os.name as status FROM theguide_order o,theguide_order_status os where o.order_status_id=os.order_status_id and o.member_id=3 order by o.order_id desc LIMIT 0,8 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_order_goods` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `theguide_code` [ RunTime:0.0054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+NOTIC: [8] Use of undefined constant key - assumed 'key' E:\wamp\www\theguide\Runtime\Cache\Home\3e0ea0721a1f26f07c6c355f7a27f4e8.php 第 249 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\theguide\Runtime\Cache\Home\3e0ea0721a1f26f07c6c355f7a27f4e8.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001144s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001223s ]
+
+[ 2017-03-29T11:13:48+08:00 ] ::1 /theguide/order.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_order` WHERE `member_id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT o.order_num_alias as alias,o.order_id,o.name,o.date_added,o.total,os.name as status FROM theguide_order o,theguide_order_status os where o.order_status_id=os.order_status_id and o.member_id=3 order by o.order_id desc LIMIT 0,8 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_order_goods` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `theguide_code` [ RunTime:0.0048s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000320s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000459s ]
+NOTIC: [8] Use of undefined constant key - assumed 'key' E:\wamp\www\theguide\Runtime\Cache\Home\3e0ea0721a1f26f07c6c355f7a27f4e8.php 第 249 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\theguide\Runtime\Cache\Home\3e0ea0721a1f26f07c6c355f7a27f4e8.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000893s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000923s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000987s ]
+

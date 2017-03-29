@@ -1,0 +1,174 @@
+<include file="Public:header" />
+
+<div class="main product">
+    <div class="container">
+
+        <div class="container">
+            <div class="alert alert-success hidden" role="alert">
+              <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+              <div id="success"></div>
+            </div>
+                
+            <div class="alert alert-danger hidden" role="alert">
+              <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+              <div id="fail"></div>
+            </div>
+        </div>
+
+        <div class="row" id="content">
+            <div class="col-lg-6 col-md-6 product-img"><img src="__ROOT__/uploads/image/{$goods.image}" alt=""></div>
+            <div class="col-lg-6 col-md-6 product-txt">
+                <div class="future-txt">
+                    <h2>{$goods.name}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;The guide</h2>
+                    <h2>￥：<span id="Price">{$goods.price}</span>元</h2>
+                    <h3>优惠 ：{$goods.ms}</h3>
+                </div>
+                
+                <!-- 加入购物车 -->
+                <div class="pull-leftt">
+
+                    <div class="select_number">
+                        <div class="row">
+                            <li class="col-sm-4"></li>
+                            <li class="col-sm-1"><button class="decrease btn  btn-default" onclick="changeQty(0); return false;">-</button></li>
+                            <li class="col-sm-2">
+                                <input class="text form-control text-center" type="text" id="quantity" value="1" size="2" name="quantity">
+                            </li>
+                            <li class="col-sm-1" style="padding-left:0"><button class="increase btn  btn-default" onclick="changeQty(1); return false;">+</button></li>
+                            <li class="col-sm-4"></li>
+                        </div>
+                    </div>
+                        <input type="hidden" value="{$goods.goods_id}" size="2" name="goods_id">
+                </div> 
+    
+                <div class="pull-leftt">
+                    <a href="{:U('/cart')}">
+                        <button id="button-cart" class="button btn-cart btn btn-primary" data-loading-text="Loading..." type="button">
+                            <span>加入购物车</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row regulation">
+            <div class="col-lg-6  col-md-6">
+                <h3>未来星购买规则 :</h3>
+                <hr>
+                {$filegoods[0][lv][0].description}
+                <!-- <p>荐朋友购买可返给你10%的奖励。</p>
+                <p>累积主第11名客户将返利15%的奖励。</p>
+                <p>可在IB办公室下载未来星软件免费试用一个月。</p>
+                <p>每个在电脑上安装的未来星软件仅限一次。</p>
+                <p>CMC视频直播室听课学习。</p> -->
+            </div>
+            <div class="col-lg-6  col-md-6">
+                <h3>未来星特性 : </h3>
+                <hr>
+                {$filegoods[0][lv][0].summary}
+                <!-- <p>微型交易软件。</p>
+                <p>针对刚接触外汇的用户，增加体验度。</p>
+                <p>在符合条件的情况下，领两层客户的佣金。</p> -->
+            </div>
+        </div>
+    </div>
+    <div class="future-flow clearfix">
+        <!--<img src="./images/future-flow.jpg" alt="">-->
+        <div class="container">
+            <div class="row">
+                <li class="col-sm-4 flow path">已购买未来星安装流程 ：</li>
+                <li class="col-sm-6"></li>
+                <li class="col-sm-2"></li>
+            </div>
+            <div class="row blink">
+                <li class="col-sm-6"></li>
+                <li class="col-sm-6"><b class="icon-local"></b><p></p><span>收到客户购买未来星的汇款凭证</span><strong></strong><i class="glyphicon glyphicon-paste"></i></li>
+            </div>
+            <div class="row blink">
+                <li class="col-sm-6" style="text-align:right;position:relative;right:-20px;"><i class="glyphicon glyphicon-link"></i><strong></strong><span>发送序列号和未来星的下载链接（以邮箱的形式发送）</span><p></p><b class="icon-local"></b></li>
+                <li class="col-sm-6"></li>
+            </div>
+            <div class="row blink">
+                <li class="col-sm-6"></li>
+                <li class="col-sm-6"><b class="icon-local"></b><p></p><span>安装成功，如实填写基本信息，并把序列号及密码填上</span><strong></strong><i class="glyphicon glyphicon-edit"></i></li>
+            </div>
+            <div class="row blink">
+                <li class="col-sm-6" style="text-align:right;position:relative;right:-20px;"><i class="glyphicon glyphicon-hand-up"></i><strong></strong><span>点击正式版注册</span><p></p><b class="icon-local"></b></li>
+                <li class="col-sm-6"></li>
+            </div>
+            <div class="row blink">
+                <li class="col-sm-6"></li>
+                <li class="col-sm-6"><b class="icon-local"></b><p></p><span>注册模拟账户</span><strong></strong><i class="glyphicon glyphicon-user"></i></li>
+            </div>
+            <div class="blink">
+                <li class="col-sm-6"></li>
+                <li class="col-sm-6"><span>模拟账户注册：点击平台左上角文件 > 开新模拟账户 > 点击下一步</span></li>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public:footer" />
+
+
+<script>
+    var icon_local=$('.future-flow .container .blink b'),num=-1;
+    setInterval(function () {
+        num==4 ? num=-1 : num;
+        num++;
+        icon_local.removeClass('icon-local');
+        icon_local.eq(num).addClass('icon-local');
+
+    },2000);
+function changeQty(increase) {
+    var qty = parseInt($('.select_number').find("input").val());
+    if ( !isNaN(qty) ) {
+        qty = increase ? qty+1 : (qty > <?php echo $goods['minimum']; ?> ? qty-1 : <?php echo $goods['minimum']; ?>);
+        $('.select_number').find("input").val(qty);
+    }
+}   
+$('#button-cart').bind('click', function() {
+    $.ajax({
+        url: "{:U('/cart_add')}",
+        type: 'post',
+        data: $('#content input[type=\'text\'],#content input[type=\'hidden\']'),
+        dataType: 'json',
+        success: function(json) {
+            $('.alert').addClass('hidden');
+            $('.box-check').removeClass('text-error');
+            $('.text-danger').remove();
+            if (json['error']) {
+                 if (json['error']['option']) {
+                  for (i in json['error']['option']) {
+                    var element = $('#option-'+i);
+                    if (element.parent().hasClass('box-check')) {
+                      element.parent().addClass('text-error').after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                    } else {
+                      element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                    }
+                  }
+                    }
+                    // $('.text-danger').parent().addClass('has-error');
+        }   
+            
+            if (json['success']) {              
+                $('.alert-success').removeClass('hidden');
+                $('#success').text(json['success']);
+                $('#cart-total').text(json['total']);
+            }else if(json['error']['quantity']){
+                $('.alert-danger').removeClass('hidden');
+                $('#fail').text(json['error']['quantity']);
+            }   
+            
+        }
+    }); 
+});
+
+$('.close').click(function(){
+    $(this).parent().addClass('hidden');
+});
+</script>
+
+
+</body>
+</html>

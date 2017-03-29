@@ -1,0 +1,123 @@
+<extend name="Public:base" />
+<block name="content">
+<div class="page-header">
+		<h1>
+			{$breadcrumb2}
+			<small>
+				<i class="icon-double-angle-right"></i>
+				{$crumbs}
+			</small>
+		</h1>
+	</div>
+<div class="row">
+	<div class="col-xs-12">	
+		<form class="form-horizontal" id="validation-form"  method="post" action='{$action}'>
+			
+			<notempty name="Think.get.id">
+			<input name="id" type="hidden" value="{$Think.get.id}" />
+			</notempty>
+			
+
+			<div class="space-4"></div>
+			
+			<div class="form-group">
+				<label class="col-sm-1 control-label no-padding-left">问题</label>
+				<div class="col-sm-11">
+					<div class="clearfix">
+					<input name="title" id="value" class="col-xs-10 col-sm-5" value="{$d.title|default=''}" type="text">
+					</div>
+				</div>
+			</div>
+			
+			
+			<!-- <div class="form-group">
+				<label class="col-sm-1 control-label no-padding-left"> *邀请码 </label>
+				<div class="col-sm-11">
+					<div class="clearfix">
+					<input name="code" id="value" class="col-xs-10 col-sm-5" value="{$d.code|default=''}" type="text">
+					</div>
+				</div>
+			</div> -->
+
+			<div class="form-group">
+				<label class="col-sm-1 control-label no-padding-left">问答</label>
+				<div class="col-sm-11">
+					<div class="clearfix">
+					<textarea id="content" class="" style="height: 300px; width: 80%;" name="content" value="">{$d.content}</textarea>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-sm-1 control-label no-padding-left"> </label>	
+				<div class="col-sm-11">
+					<input name="send" type="submit" value="提交" class="btn btn-primary" />
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</block>
+<block name="javascript">
+<script src="__JS__/jquery.validate.min.js"></script>	
+<js href="__PUBLIC__/kindeditor/kindeditor.js,__PUBLIC__/kindeditor/lang/zh_CN.js"/>
+<script type="text/javascript">
+            function del_image(num) {
+                $('#image' + num).css('background-image', '');
+                $('#image_' + num).val('');
+            }
+            $(function() {
+                var content;
+                KindEditor.ready(function(K) {
+                    content = K.create('#content', {
+                        allowFileManager: true,
+                        uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php?dirname=question'
+                    });
+                });
+               
+
+                KindEditor.ready(function(K) {
+                    K.create();
+                    var editor = K.editor({
+                        allowFileManager: true,
+                        uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php?dirname=question'
+                                //sdl:false
+                    });
+                    K('#uparea1').click(function() {
+                        editor.loadPlugin('image', function() {
+                            editor.plugin.imageDialog({
+                                imageUrl: K('#image_1').val(),
+                                clickFn: function(url, title, width, height, border, align) {
+                                    $('#image1').css('background-image', 'url(' + url + ')').css('background-size', '220px 160px');
+                                    K('#image_1').val(url);
+                                    // K('#getImgUrl').val(url);
+                                    editor.hideDialog();
+                                }
+                            });
+                        });
+                    });
+                
+                });
+                $("#checkNewsTitle").click(function() {
+                    if ($('#title').val() == '') {
+                        popup.error('标题不能为空！');
+                        return false;
+                    }
+                    $.getJSON("__URL__/checkNewsTitle", {title: $("#title").val(), id: "{$info.id}"}, function(json) {
+                        $("#checkNewsTitle").css("color", json.status == 1 ? "#0f0" : "#f00").html(json.info);
+                    });
+                });
+
+                $(".submit").click(function() {
+                    if ($('#title').val() == '') {
+                        popup.error('标题不能为空！');
+                        return false;
+                    }
+                    content.sync();
+                    commonAjaxSubmit("{$action_url}");
+                    return false;
+                });
+            });
+        </script>
+					
+</block>

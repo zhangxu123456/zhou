@@ -1,0 +1,84 @@
+<include file="Public:header" />
+
+<article class="header question"></article>
+<div id="main">
+    <div class="about">
+        <div class="containerr">
+            <div class="row">
+                <div class="col-md-2 col-lg-2"></div>
+                <div class="col-md-8 col-lg-8">
+                    <article class="text">
+                        <h3>{$file[0].title}</h3>
+                        <h4>Company profile</h4>
+                        <hr>
+                        <h4>
+                            {$file[0].content}
+                        </h4>
+                    </article>
+                </div>
+                <div class="col-md-2 col-lg-2"></div>
+            </div>
+            <div class="row ico-png">
+            <div class="col-md-3 col-lg-3"></div>
+                <volist name="file" id="vo">
+                    <volist name="vo.lv2" id="vv">
+                        <div class="col-md-3 col-lg-3"><img src="__ROOT__/uploads/image/{$vv.image}" alt=""></div>
+                    </volist>
+                </volist>
+            <div class="col-md-3 col-lg-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="distribution">
+        <div class="contbution">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <article class="text">
+                        <h3>公司地址</h3>
+                        <h4>Enterprise distribution</h4>
+                        <hr>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <ul class="clearfix">
+            <li>
+
+                <img src="__RES__/images/distri_li1.jpg" alt="">
+                <dd>
+                    <h6>上海</h6>
+                    <h5>021-63353683</h5>
+                    <p><span>地址：</span>上海市黄浦区龙华东路858号海外滩中心办公室B座603-604</p>
+                </dd>
+            </li>
+            <li>
+                <img src="__RES__/images/distri_li2.jpg" alt="">
+                <dd>
+                    <h6>无锡</h6>
+                    <h5>0510-66926188</h5>
+                    <p><span>地址：</span>无锡滨湖区鸿桥路无锡现代国际工业设计大厦912-918</p>
+                </dd>
+            </li>
+            <li>
+                <img src="__RES__/images/distri_li3.jpg" alt="">
+                <dd>
+                    <h6>济南</h6>
+                    <h5>021-63353683</h5>
+                    <p><span>地址：</span>济南市槐荫区绿地中央广场A座1201,1210-1212</p>
+                </dd>
+            </li>
+            <li>
+                <img src="__RES__/images/distri_li4.jpg" alt="">
+                <dd>
+                    <h6>上海</h6>
+                    <h5>021-63353683</h5>
+                    <p><span>地址：</span>上海市黄浦区龙华东路858号海外滩中心办公室B座603-604</p>
+                </dd>
+            </li>
+        </ul>
+    </div>
+</div>
+<include file="Public:footer" />
+</body>
+</html>

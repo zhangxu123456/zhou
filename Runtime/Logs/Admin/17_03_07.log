@@ -1,0 +1,1273 @@
+[ 2017-03-07T10:18:39+08:00 ] ::1 /theguide/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003214s ]
+
+[ 2017-03-07T10:18:39+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000934s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002970s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009440s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001596s ]
+
+[ 2017-03-07T10:18:40+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003427s ]
+SQL: SHOW COLUMNS FROM `theguide_admin` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `theguide_admin` WHERE `a_uname` = 'admin' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `theguide_admin` SET `a_last_login_time`='1488853120',`a_login_count`=a_login_count+1,`a_last_login_ip`='0.0.0.0' WHERE `a_id` = 2 [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0047s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('后台系统用户','2','admin','2017-03-07 10:18:40','登录了后台系统') [ RunTime:0.0015s ]
+
+[ 2017-03-07T10:18:40+08:00 ] ::1 /theguide/admin.php?s=/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003112s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip [ RunTime:0.0008s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip where last_visit_time='2017-03-07' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_member`  [ RunTime:0.0004s ]
+SQL: SELECT * from theguide_member where create_time>=1488816000 [ RunTime:0.0003s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) [ RunTime:0.0003s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) AND date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0003s ]
+SQL: SELECT count(*) AS total FROM theguide_order  [ RunTime:0.0002s ]
+SQL: SELECT count(*) AS total FROM theguide_order  where date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\OrderModel::show_order_page(), called in E:\wamp\www\theguide\Modules\Admin\Controller\IndexController.class.php on line 28 and defined E:\wamp\www\theguide\Modules\Admin\Model\OrderModel.class.php 第 21 行.
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0003s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_user_action` ORDER BY ua_id desc LIMIT 10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.034921s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000759s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000915s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000988s ]
+
+[ 2017-03-07T10:19:14+08:00 ] ::1 /theguide/admin.php?s=/member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003524s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0060s ]
+SQL: select * from theguide_member where 1  [ RunTime:0.0004s ]
+SQL: select * from theguide_member where 1  order by member_id desc LIMIT 0,10 [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_member` WHERE `pid` = 137 OR `sid` = 137 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_member` WHERE `pid` = 136 OR `sid` = 136 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.031366s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000810s ]
+NOTIC: [8] Undefined index: num E:\wamp\www\theguide\Runtime\Cache\Admin\316be533e8b7772c98e865fb1f158ff5.php 第 227 行.
+NOTIC: [8] Undefined index: num E:\wamp\www\theguide\Runtime\Cache\Admin\316be533e8b7772c98e865fb1f158ff5.php 第 227 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006910s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001243s ]
+
+[ 2017-03-07T10:19:17+08:00 ] ::1 /theguide/admin.php?s=/Member/del/id/137
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001006s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003030s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0051s ]
+SQL: SELECT `idcadeimage1`,`idcadeimage2`,`addressimage` FROM `theguide_member` WHERE `member_id` = 137 LIMIT 1   [ RunTime:0.0003s ]
+SQL: DELETE FROM `theguide_member` WHERE `member_id` = 137 [ RunTime:0.0021s ]
+NOTIC: [2] unlink(E:/wamp/www/theguide/Uploads/image/regimage/): Permission denied E:\wamp\www\theguide\Modules\Admin\Model\MemberModel.class.php 第 135 行.
+NOTIC: [2] unlink(E:/wamp/www/theguide/Uploads/image/regimage/): Permission denied E:\wamp\www\theguide\Modules\Admin\Model\MemberModel.class.php 第 136 行.
+NOTIC: [2] unlink(E:/wamp/www/theguide/Uploads/image/regimage/): Permission denied E:\wamp\www\theguide\Modules\Admin\Model\MemberModel.class.php 第 137 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000751s ]
+
+[ 2017-03-07T10:19:18+08:00 ] ::1 /theguide/admin.php?s=/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001478s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004294s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0056s ]
+SQL: select * from theguide_member where 1  [ RunTime:0.0004s ]
+SQL: select * from theguide_member where 1  order by member_id desc LIMIT 0,10 [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_member` WHERE `pid` = 136 OR `sid` = 136 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.030994s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000720s ]
+NOTIC: [8] Undefined index: num E:\wamp\www\theguide\Runtime\Cache\Admin\316be533e8b7772c98e865fb1f158ff5.php 第 227 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006229s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000960s ]
+
+[ 2017-03-07T11:52:42+08:00 ] ::1 /theguide/admin.php?s=/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001380s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004258s ]
+
+[ 2017-03-07T11:52:42+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002315s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001468s ]
+
+[ 2017-03-07T11:52:43+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002883s ]
+SQL: SHOW COLUMNS FROM `theguide_admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_admin` WHERE `a_uname` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `theguide_admin` SET `a_last_login_time`='1488858763',`a_login_count`=a_login_count+1,`a_last_login_ip`='0.0.0.0' WHERE `a_id` = 2 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0054s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('后台系统用户','2','admin','2017-03-07 11:52:43','登录了后台系统') [ RunTime:0.0016s ]
+
+[ 2017-03-07T11:52:43+08:00 ] ::1 /theguide/admin.php?s=/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002245s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip [ RunTime:0.0007s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip where last_visit_time='2017-03-07' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `theguide_member`  [ RunTime:0.0004s ]
+SQL: SELECT * from theguide_member where create_time>=1488816000 [ RunTime:0.0003s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) [ RunTime:0.0003s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) AND date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0003s ]
+SQL: SELECT count(*) AS total FROM theguide_order  [ RunTime:0.0002s ]
+SQL: SELECT count(*) AS total FROM theguide_order  where date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\OrderModel::show_order_page(), called in E:\wamp\www\theguide\Modules\Admin\Controller\IndexController.class.php on line 28 and defined E:\wamp\www\theguide\Modules\Admin\Model\OrderModel.class.php 第 21 行.
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0007s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `theguide_user_action` ORDER BY ua_id desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.033942s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007396s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001508s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000880s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2017-03-07T11:52:45+08:00 ] ::1 /theguide/admin.php?s=/member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002481s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0052s ]
+SQL: select * from theguide_member where 1  [ RunTime:0.0004s ]
+SQL: select * from theguide_member where 1  order by member_id desc LIMIT 0,10 [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_member` WHERE `pid` = 138 OR `sid` = 138 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_member` WHERE `pid` = 136 OR `sid` = 136 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.030611s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000512s ]
+NOTIC: [8] Undefined index: num E:\wamp\www\theguide\Runtime\Cache\Admin\316be533e8b7772c98e865fb1f158ff5.php 第 227 行.
+NOTIC: [8] Undefined index: num E:\wamp\www\theguide\Runtime\Cache\Admin\316be533e8b7772c98e865fb1f158ff5.php 第 227 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000815s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000887s ]
+
+[ 2017-03-07T13:47:06+08:00 ] ::1 /theguide/admin.php?s=/member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001983s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005946s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0209s ]
+SQL: select * from theguide_member where 1  [ RunTime:0.0004s ]
+SQL: select * from theguide_member where 1  order by member_id desc LIMIT 0,10 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.031705s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001265s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001339s ]
+
+[ 2017-03-07T13:47:07+08:00 ] ::1 /theguide/admin.php?s=/member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003620s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0061s ]
+SQL: select * from theguide_member where 1  [ RunTime:0.0004s ]
+SQL: select * from theguide_member where 1  order by member_id desc LIMIT 0,10 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.029959s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004940s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001030s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006423s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001065s ]
+
+[ 2017-03-07T13:49:46+08:00 ] ::1 /theguide/admin.php?s=/member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001499s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004268s ]
+
+[ 2017-03-07T13:49:46+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003099s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000974s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001234s ]
+
+[ 2017-03-07T13:49:47+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001119s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003189s ]
+SQL: SHOW COLUMNS FROM `theguide_admin` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_admin` WHERE `a_uname` = 'admin' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `theguide_admin` SET `a_last_login_time`='1488865787',`a_login_count`=a_login_count+1,`a_last_login_ip`='0.0.0.0' WHERE `a_id` = 2 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0058s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('后台系统用户','2','admin','2017-03-07 13:49:47','登录了后台系统') [ RunTime:0.0017s ]
+
+[ 2017-03-07T13:49:47+08:00 ] ::1 /theguide/admin.php?s=/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001275s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003429s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip where last_visit_time='2017-03-07' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `theguide_member`  [ RunTime:0.0003s ]
+SQL: SELECT * from theguide_member where create_time>=1488816000 [ RunTime:0.0002s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) [ RunTime:0.0002s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) AND date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0002s ]
+SQL: SELECT count(*) AS total FROM theguide_order  [ RunTime:0.0002s ]
+SQL: SELECT count(*) AS total FROM theguide_order  where date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\OrderModel::show_order_page(), called in E:\wamp\www\theguide\Modules\Admin\Controller\IndexController.class.php on line 28 and defined E:\wamp\www\theguide\Modules\Admin\Model\OrderModel.class.php 第 21 行.
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0004s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `theguide_user_action` ORDER BY ua_id desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.035210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001126s ]
+
+[ 2017-03-07T15:04:23+08:00 ] ::1 /theguide/admin.php?s=/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001101s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003324s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip [ RunTime:0.0007s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip where last_visit_time='2017-03-07' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `theguide_member`  [ RunTime:0.0004s ]
+SQL: SELECT * from theguide_member where create_time>=1488816000 [ RunTime:0.0004s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) [ RunTime:0.0003s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) AND date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0004s ]
+SQL: SELECT count(*) AS total FROM theguide_order  [ RunTime:0.0003s ]
+SQL: SELECT count(*) AS total FROM theguide_order  where date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\OrderModel::show_order_page(), called in E:\wamp\www\theguide\Modules\Admin\Controller\IndexController.class.php on line 28 and defined E:\wamp\www\theguide\Modules\Admin\Model\OrderModel.class.php 第 21 行.
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0003s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_user_action` ORDER BY ua_id desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.032897s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000736s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001295s ]
+
+[ 2017-03-07T15:04:30+08:00 ] ::1 /theguide/admin.php?s=/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002316s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006247s ]
+
+[ 2017-03-07T15:04:30+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001787s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005144s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001880s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001939s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002008s ]
+
+[ 2017-03-07T15:12:09+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003418s ]
+SQL: SHOW COLUMNS FROM `theguide_admin` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `theguide_admin` WHERE `a_uname` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `theguide_admin` SET `a_last_login_time`='1488870729',`a_login_count`=a_login_count+1,`a_last_login_ip`='0.0.0.0' WHERE `a_id` = 2 [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0054s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('后台系统用户','2','admin','2017-03-07 15:12:09','登录了后台系统') [ RunTime:0.0018s ]
+
+[ 2017-03-07T15:12:09+08:00 ] ::1 /theguide/admin.php?s=/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001463s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004994s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip [ RunTime:0.0007s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip where last_visit_time='2017-03-07' [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `theguide_member`  [ RunTime:0.0003s ]
+SQL: SELECT * from theguide_member where create_time>=1488816000 [ RunTime:0.0003s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) [ RunTime:0.0002s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) AND date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0003s ]
+SQL: SELECT count(*) AS total FROM theguide_order  [ RunTime:0.0002s ]
+SQL: SELECT count(*) AS total FROM theguide_order  where date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\OrderModel::show_order_page(), called in E:\wamp\www\theguide\Modules\Admin\Controller\IndexController.class.php on line 28 and defined E:\wamp\www\theguide\Modules\Admin\Model\OrderModel.class.php 第 21 行.
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0003s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `theguide_user_action` ORDER BY ua_id desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.037231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000975s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001381s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001164s ]
+
+[ 2017-03-07T15:12:10+08:00 ] ::1 /theguide/admin.php?s=/member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001119s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003523s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0210s ]
+SQL: select * from theguide_member where 1  [ RunTime:0.0004s ]
+SQL: select * from theguide_member where 1  order by member_id desc LIMIT 0,10 [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `theguide_member` WHERE `pid` = 139 OR `sid` = 139 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.036418s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005973s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000944s ]
+NOTIC: [8] Undefined index: num E:\wamp\www\theguide\Runtime\Cache\Admin\316be533e8b7772c98e865fb1f158ff5.php 第 227 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007583s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.000688s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001260s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001323s ]
+
+[ 2017-03-07T15:12:12+08:00 ] ::1 /theguide/admin.php?s=/Member/changestatus_vip/member_id/139
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003041s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0059s ]
+SQL: SELECT `status` FROM `theguide_member` WHERE `member_id` = 139 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `theguide_member` SET `status`='1' WHERE `member_id` = 139 [ RunTime:0.0016s ]
+
+[ 2017-03-07T16:19:08+08:00 ] ::1 /theguide/admin.php?s=/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001220s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003436s ]
+
+[ 2017-03-07T16:19:08+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001178s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003229s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009308s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000974s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001177s ]
+
+[ 2017-03-07T16:19:09+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001048s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003114s ]
+SQL: SHOW COLUMNS FROM `theguide_admin` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `theguide_admin` WHERE `a_uname` = 'admin' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `theguide_admin` SET `a_last_login_time`='1488874749',`a_login_count`=a_login_count+1,`a_last_login_ip`='0.0.0.0' WHERE `a_id` = 2 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0060s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('后台系统用户','2','admin','2017-03-07 16:19:09','登录了后台系统') [ RunTime:0.0015s ]
+
+[ 2017-03-07T16:19:09+08:00 ] ::1 /theguide/admin.php?s=/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001218s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003562s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip [ RunTime:0.0007s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip where last_visit_time='2017-03-07' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `theguide_member`  [ RunTime:0.0003s ]
+SQL: SELECT * from theguide_member where create_time>=1488816000 [ RunTime:0.0003s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) [ RunTime:0.0002s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) AND date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0003s ]
+SQL: SELECT count(*) AS total FROM theguide_order  [ RunTime:0.0002s ]
+SQL: SELECT count(*) AS total FROM theguide_order  where date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\OrderModel::show_order_page(), called in E:\wamp\www\theguide\Modules\Admin\Controller\IndexController.class.php on line 28 and defined E:\wamp\www\theguide\Modules\Admin\Model\OrderModel.class.php 第 21 行.
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0004s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `theguide_user_action` ORDER BY ua_id desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.034926s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000951s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007690s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001812s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001198s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001260s ]
+
+[ 2017-03-07T16:19:11+08:00 ] ::1 /theguide/admin.php?s=/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001255s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003629s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0005s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `theguide_order_status` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `theguide_order_status`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.033527s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000942s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001146s ]
+
+[ 2017-03-07T16:19:16+08:00 ] ::1 /theguide/admin.php?s=/Order/del/id/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003094s ]
+SQL: SHOW COLUMNS FROM `theguide_order` [ RunTime:0.0217s ]
+SQL: DELETE FROM `theguide_order` WHERE `order_id` = 9 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `theguide_order_goods` [ RunTime:0.0099s ]
+SQL: DELETE FROM `theguide_order_goods` WHERE `order_id` = 9 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `theguide_order_history` [ RunTime:0.0072s ]
+SQL: DELETE FROM `theguide_order_history` WHERE `order_id` = 9 [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `theguide_order_total` [ RunTime:0.0068s ]
+SQL: DELETE FROM `theguide_order_total` WHERE `order_id` = 9 [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009154s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001038s ]
+
+[ 2017-03-07T16:19:17+08:00 ] ::1 /theguide/admin.php?s=/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001223s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003580s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0005s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `theguide_order_status` [ RunTime:0.0235s ]
+SQL: SELECT * FROM `theguide_order_status`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000277s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.035305s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004951s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001028s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004951s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001267s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001344s ]
+
+[ 2017-03-07T16:19:19+08:00 ] ::1 /theguide/admin.php?s=/Order/show_order/id/8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001130s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003508s ]
+SQL: SELECT o.*,m.uname,m.email,o.shipping_tel,os.name,a.address FROM theguide_order o,theguide_member m,theguide_address a,theguide_order_status os WHERE o.member_id=m.member_id AND o.address_id=a.address_id and o.order_status_id=os.order_status_id AND o.order_id=8 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_order_goods` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `theguide_order_goods` WHERE ( order_id=8 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM theguide_order_total WHERE order_id =8 ORDER BY sort_order [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `theguide_order_status` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `theguide_order_status`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_order_history` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `theguide_order_history` WHERE `order_id` = 8  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.037352s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001017s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 273 行.
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 273 行.
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\theguide\Modules\Common\Common\function.php 第 273 行.
+NOTIC: [8] Undefined index:  E:\wamp\www\theguide\Modules\Common\Common\function.php 第 103 行.
+SQL: select * from theguide_order_option where order_goods_id=8 and order_id=8 [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.013408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001215s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001275s ]
+
+[ 2017-03-07T16:19:19+08:00 ] ::1 /theguide/admin.php?s=/Order/history/id/8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001251s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003326s ]
+SQL: SELECT oh.date_added, os.name AS status, oh.comment, oh.notify FROM theguide_order_history oh LEFT JOIN theguide_order_status os ON oh.order_status_id = os.order_status_id WHERE oh.order_id = '8' ORDER BY oh.date_added ASC [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007737s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000941s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001109s ]
+
+[ 2017-03-07T17:04:44+08:00 ] ::1 /theguide/admin.php?s=/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003027s ]
+
+[ 2017-03-07T17:04:44+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003041s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001068s ]
+
+[ 2017-03-07T17:04:46+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000960s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003107s ]
+SQL: SHOW COLUMNS FROM `theguide_admin` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `theguide_admin` WHERE `a_uname` = 'admin' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `theguide_admin` SET `a_last_login_time`='1488877486',`a_login_count`=a_login_count+1,`a_last_login_ip`='0.0.0.0' WHERE `a_id` = 2 [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0059s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('后台系统用户','2','admin','2017-03-07 17:04:46','登录了后台系统') [ RunTime:0.0013s ]
+
+[ 2017-03-07T17:04:46+08:00 ] ::1 /theguide/admin.php?s=/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001285s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003542s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip where last_visit_time='2017-03-07' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `theguide_member`  [ RunTime:0.0004s ]
+SQL: SELECT * from theguide_member where create_time>=1488816000 [ RunTime:0.0003s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) [ RunTime:0.0002s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) AND date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0002s ]
+SQL: SELECT count(*) AS total FROM theguide_order  [ RunTime:0.0002s ]
+SQL: SELECT count(*) AS total FROM theguide_order  where date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\OrderModel::show_order_page(), called in E:\wamp\www\theguide\Modules\Admin\Controller\IndexController.class.php on line 28 and defined E:\wamp\www\theguide\Modules\Admin\Model\OrderModel.class.php 第 21 行.
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0005s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `theguide_user_action` ORDER BY ua_id desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.031428s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000736s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007539s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001563s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000952s ]
+
+[ 2017-03-07T17:04:50+08:00 ] ::1 /theguide/admin.php?s=/settings/general
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003517s ]
+SQL: SHOW COLUMNS FROM `theguide_config` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `theguide_config` WHERE `config_group` = 'site'  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.030150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005288s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000734s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001027s ]
+
+[ 2017-03-07T17:05:29+08:00 ] ::1 /theguide/admin.php?s=/settings/general
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002741s ]
+SQL: SHOW COLUMNS FROM `theguide_config` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `theguide_config` WHERE `config_group` = 'site'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023632s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000730s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000922s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000982s ]
+
+[ 2017-03-07T17:05:51+08:00 ] ::1 /theguide/admin.php?s=/settings/general
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003337s ]
+SQL: SHOW COLUMNS FROM `theguide_config` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_config` WHERE `config_group` = 'site'  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.032933s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000850s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017830s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001102s ]
+
+[ 2017-03-07T18:05:47+08:00 ] ::1 /theguide/admin.php?s=/settings/general
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003485s ]
+
+[ 2017-03-07T18:05:47+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001182s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003448s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008825s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001482s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001579s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002111s ]
+
+[ 2017-03-07T18:05:49+08:00 ] ::1 /theguide/admin.php?s=/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001298s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003806s ]
+SQL: SHOW COLUMNS FROM `theguide_admin` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `theguide_admin` WHERE `a_uname` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `theguide_admin` SET `a_last_login_time`='1488881149',`a_login_count`=a_login_count+1,`a_last_login_ip`='0.0.0.0' WHERE `a_id` = 2 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0061s ]
+SQL: INSERT INTO `theguide_user_action` (`type`,`user_id`,`uname`,`add_time`,`info`) VALUES ('后台系统用户','2','admin','2017-03-07 18:05:49','登录了后台系统') [ RunTime:0.0017s ]
+
+[ 2017-03-07T18:05:49+08:00 ] ::1 /theguide/admin.php?s=/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001136s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003362s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip [ RunTime:0.0008s ]
+SQL: SELECT DISTINCT ip from theguide_visitors_ip where last_visit_time='2017-03-07' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `theguide_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `theguide_member`  [ RunTime:0.0004s ]
+SQL: SELECT * from theguide_member where create_time>=1488816000 [ RunTime:0.0003s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) [ RunTime:0.0002s ]
+SQL: SELECT SUM(total) AS total FROM theguide_order WHERE order_status_id NOT IN (3,5) AND date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0003s ]
+SQL: SELECT count(*) AS total FROM theguide_order  [ RunTime:0.0003s ]
+SQL: SELECT count(*) AS total FROM theguide_order  where date_added>=1488816000 AND date_added<=1488902400 [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\OrderModel::show_order_page(), called in E:\wamp\www\theguide\Modules\Admin\Controller\IndexController.class.php on line 28 and defined E:\wamp\www\theguide\Modules\Admin\Model\OrderModel.class.php 第 21 行.
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0005s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `theguide_user_action` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `theguide_user_action` ORDER BY ua_id desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.034740s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000884s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007689s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001130s ]
+
+[ 2017-03-07T18:05:51+08:00 ] ::1 /theguide/admin.php?s=/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001219s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003964s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0006s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `theguide_order_status` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `theguide_order_status`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.033986s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005517s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001322s ]
+
+[ 2017-03-07T18:05:53+08:00 ] ::1 /theguide/admin.php?s=/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001723s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003865s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  [ RunTime:0.0006s ]
+SQL: SELECT o.order_id,o.order_num_alias,o.total,o.ip_region,o.payment_code,o.shipping_method,o.date_added,o.date_modified,m.uname,os.order_status_id,os.name FROM theguide_order o,theguide_member m,theguide_order_status os WHERE o.member_id=m.member_id AND o.order_status_id=os.order_status_id  ORDER BY o.order_id DESC LIMIT 0,10 [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `theguide_order_status` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `theguide_order_status`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `theguide_menu` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `theguide_menu` ORDER BY sort_order  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.030561s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000922s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001130s ]
+

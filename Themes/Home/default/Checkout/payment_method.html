@@ -1,0 +1,24 @@
+<?php if (isset($error_warning)) { ?>
+<div class="warning"><?php echo $error_warning; ?></div>
+<?php } ?>
+<div class="container">
+<h1>选择支付方式</h1>
+
+<div class="radio">
+  <volist name="list" id="payment">
+    <ul class="clearfix text-center">
+        <li class="col-sm-2 clearfix">
+          <input type="radio" name="payment_method" value="{$payment.payment_code}" checked="checked" />
+          {$payment.payment_name}
+        </li>
+        <li class="col-sm-2"> </li>
+    </ul>
+ </volist>
+</div>
+
+<div class="buttons text-center" style="padding-bottom:20px;">
+
+    <input type="button" value="继续" id="button-payment-method" class="btn btn-primary btn-continue" />
+
+</div>
+</div>

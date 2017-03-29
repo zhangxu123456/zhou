@@ -1,0 +1,136 @@
+<include file="Public:header" />
+<article class="header question">
+</article>
+<div class="main itemlist">
+    <div class="container">
+        <div class="row">
+            <include file="User:side" />
+            <div class="ct  w100">
+                <pre><h4>发票邮寄地址簿</h4></pre>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+							<!-- <td class="text-center"><h4 style="color:#337ab7">编号</h4></td> -->
+							<td class="text-center"><h4 style="color:#337ab7">姓名</h4></td>
+							<td class="text-center"><h4 style="color:#337ab7">电话</h4></td>
+                            <td class="text-center"><h4 style="color:#337ab7">地址</h4></td>
+							<td class="text-center"><h4 style="color:#337ab7">发票抬头</h4></td>
+							<td class="text-center"><h4 style="color:#337ab7">操作</h4></td>
+
+						</tr>
+                    </thead>
+                    <tbody class="text-center table-cell"  style="margin:50px 0;">
+                    <volist name="address" id="list">
+                        <tr>
+                            <!-- <td class="text-center">{$data.alias}</td> -->
+                            <td class="text-center">{$list.name}</td>
+                            <td class="text-center">{$list.telephone}</td>
+                            <td class="text-center">{$list.address}</td>
+                            <td class="text-center">{$list.invoice}</td>
+                            <td class="text-center">
+                                <a class="btn btn-primary" href="{:U('/edit_address/'.$list['address_id'])}">
+                                    编辑
+                                </a>
+                                <a class="btn btn-primary" href="{:U('/delete_address/'.$list['address_id'])}">
+                                   删除
+                                </a>
+                            </td>
+                        </tr>
+                    </volist>
+                        <!--<volist name="address" id="list">
+							<tr>
+                                <td>{$data.alias}</td>
+								<td class="text-left">
+									{$list.name}
+								</td>
+								<td class="text-left">
+									{$list.telephone}
+								</td>
+								<td class="text-left">
+									{$list.address}
+								</td>
+								<td class="text-right">
+									<a href="{:U('/edit_address/'.$list['address_id'])}">
+										<button class="button">编辑</button>
+									</a>
+									<a href="{:U('/delete_address/'.$list['address_id'])}">
+										<button class="button">删除</button>
+									</a>
+								</td>
+							</tr>
+						</volist>-->
+                    </tbody>
+                </table>
+               <!-- <div class="buttons clearfix">
+					<div class="left">
+						<a href="{:U('/add_address')}">
+							<button type="button" class="btn btn-primary">新增地址</button>
+						</a>
+					</div>
+				</div>-->
+                <!-- <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center" colspan="3"><h3>购买信息核对</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center table-cell"  style="margin:50px 0;">
+                        <tr>
+                            <td><h4>用户名</h4></td><td class="text-left">李甜甜</td>
+                        </tr>
+                        <tr>
+                            <td><h4>会员帐号</h4></td><td class="text-left">TianTian Li</td>
+                        </tr>
+                        <tr>
+                            <td><h4>电子邮箱</h4></td><td class="text-left">421932286@qq.com</td>
+                        </tr>
+                        <tr>
+                            <td><h4>电话</h4></td><td class="text-left">15026937069</td>
+                        </tr>
+                        <tr>
+                            <td><h4>邮编</h4></td><td class="text-left">000000</td>
+                        </tr>
+                        <tr>
+                            <td><h4>身份证号</h4></td><td class="text-left">500231199105240030</td>
+                        </tr>
+                        <tr>
+                            <td><h4>地址</h4></td><td class="text-left">香港鳳俠網絡科技有限公司 ©2015</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="clearfix">
+                    <button type="button" class="btn btn-primary btn-lg pull-right">确认购买</button>
+                    <button type="button" class="btn btn-danger  btn-lg pull-right" style="margin-right:20px;">取消购买</button>
+                </p> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="foot">
+    <div class="top">
+        <ul class="clearfix">
+            <li><a href="">关于我们</a><span>|</span></li>
+            <li><a href="">产品中心</a><span>|</span></li>
+            <li><a href="">动态专栏</a><span>|</span></li>
+            <li><a href="">联系我们</a><span>|</span></li>
+            <li><a href="">友情链接</a></li>
+        </ul>
+        <p>
+            <span>上海</span>
+            <span>无锡</span>
+            <span>济南</span>
+            <span>武汉</span>
+            <span>广州</span>
+        </p>
+    </div>
+    <div class="center">
+        <img src="__RES__/images/senmous-img.jpg" alt="">
+    </div>
+    <div class="bootom">
+        © 2015 NEXTEV LIMITED All Rights Reserved 沪ICP备15026264号-1
+    </div>
+</div>
+</body>
+</html>

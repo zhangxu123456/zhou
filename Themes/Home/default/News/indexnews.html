@@ -1,0 +1,24 @@
+<volist name="ne" id="vo">
+    <div class="row new-list">
+        <a href="{:U('/newsdetail/'.$vo['news_id'])}" target="_blank" title="{$vo.title}">
+            <div class="col-sm-2">
+                <h5>{$vo.date|msubstr=5,5,'utf-8',false}</h5>
+                <h6>{$vo.date|msubstr=0,4,'utf-8',false}</h6>
+            </div>
+            <div class="col-sm-3">
+                <img src="__ROOT__/uploads/image/{$vo.image}" alt="">
+            </div>
+            <div class="col-sm-7">
+                <dl>
+                    <dt>{$vo.title}</dt>
+                    <dd>{$vo.summary}</dd>
+                </dl>
+            </div>
+        </a>
+    </div>
+</volist>
+<nav aria-label="Page navigation" style="text-align:center">
+    <ul class="pagination">
+        {$page}
+    </ul>
+</nav>

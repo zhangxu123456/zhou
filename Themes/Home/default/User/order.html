@@ -1,0 +1,143 @@
+<include file="Public:header" />
+<article class="header question">
+</article>
+<div class="main itemlist">
+    <div class="container">
+        <div class="row">
+            <include file="User:side" />
+
+            <i id="xunlei" data='<?php echo json_encode($xunlei);?>'></i>
+
+            <div class="ct  w100">
+                    <pre><h4>我的订单</h4></pre>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+								<td class="text-center"><h4>订单号</h4></td>
+								<td class="text-center"><h4>状态</h4></td>
+                                <td class="text-center"><h4>领取激活码</h4></td>
+								<td class="text-center"><h4>下单时间</h4></td>
+								<td class="text-center"><h4>用户</h4></td>
+								<td class="text-center"><h4>总计</h4></td>
+                                <td class="text-center"><h4>操作</h4></td>
+							</tr>
+                        </thead>
+                        <tbody class="text-center table-cell"  style="margin:50px 0;">
+                            
+                            <volist name="list" id="data" empty="$empty">
+                                <tr>
+                                    <td class="text-center">{$data.alias}</td>
+                                    <td class="text-center">{$data.status}</td>
+                                    <!-- id="toggle_one" -->
+                                    <td class="text-center">    
+                                        <if condition="$data['status'] eq '已付款待发货'">
+                                            <i class="special-num"> 
+                                                <p  data-toggle="modal" data-target="#myModal"  class="pop_org" date-title="领取激活码" data="" >领取激活码</p>
+                                            </i>
+                                        </if>
+                                    </td>
+
+                                    <td class="text-center">{$data.date_added|toDate='Y/m/d H:i:s'}</td>
+                                    <td class="text-center">{$data.name}</td>
+                                    <td class="text-center">￥<?php echo round($data['total'] ,2); ?></td>
+                                    <td class="text-center">
+                                        <a href="{:U('/info/'.$data['order_id'])}">
+                                            <button class="btn btn-primary">
+                                                查看
+                                            </button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </volist>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__RES__/js/jquery.min.js"></script>
+<script src="__RES__/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    $xunlei=$('#xunlei').attr('data');
+    $xunlei=JSON.parse($xunlei);
+    $('.pop_org').click(function () {
+        $('.col_num_total').remove();
+        $indexs=$(this).index('.pop_org');
+        if(typeof $xunlei[$indexs]=='object'){   //判断有没有 | 线 这是有状态
+            $leng=$xunlei[$indexs].length;
+            for(var i=0;i<$leng;i++){
+                $('#wrap_te').append('<div class="col_num_total clearfix">' +
+                        '<li class="col-sm-4">激活码</li>' +
+                        '<li class="col-sm-4">'+$xunlei[$indexs][i]+'</li>' +
+                        '<li class="col-sm-4">复制</li>' +
+                        '</div>');
+            }
+        }else if(typeof $xunlei[$indexs]=='string'){
+                $('#wrap_te').append('<div class="col_num_total clearfix">' +
+                        '<li class="col-sm-4">激活码</li>' +
+                        '<li class="col-sm-4">'+$xunlei[$indexs]+'</li>' +
+                        '<li class="col-sm-4">复制</li>' +
+                        '</div>');
+        }
+    });
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="width:900px;margin: 10vw auto;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">消息</h4>
+      </div>
+      <div id="modal-body" class="modal-body" style="padding: 15px 15px 60px;">
+        <h4><i class="glyphicon glyphicon-ok"></i>已经领取过了</h4>
+        <h6>您已成功领取 激活码 请尽快激活</h6>
+           <div id="wrap_te">
+              <div class="col_num_total clearfix">
+                  <li class="col-sm-4">激活码</li>
+                  <li class="col-sm-4">{$data[key]}</li>
+                  <li class="col-sm-4">复制</li>
+              </div>
+           </div>
+      </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+
+
+
+<div class="foot">
+    <div class="top">
+        <ul class="clearfix">
+            <li><a href="">关于我们</a><span>|</span></li>
+            <li><a href="">产品中心</a><span>|</span></li>
+            <li><a href="">动态专栏</a><span>|</span></li>
+            <li><a href="">联系我们</a><span>|</span></li>
+            <li><a href="">友情链接</a></li>
+        </ul>
+        <p>
+            <span>上海</span>
+            <span>无锡</span>
+            <span>济南</span>
+            <span>武汉</span>
+            <span>广州</span>
+        </p>
+    </div>
+    <div class="center">
+        <img src="__RES__/images/senmous-img.jpg" alt="">
+    </div>
+    <div class="bootom">
+        © 2015 NEXTEV LIMITED All Rights Reserved 沪ICP备15026264号-1
+    </div>
+</div>
+<script src="__RES__/js/jquery.min.js"></script>
+<script src="__RES__/js/bootstrap.js"></script>
+
+</body>
+</html>

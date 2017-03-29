@@ -1,0 +1,31 @@
+<include file="Public:header" />
+
+<article class="header question"></article>
+<div class="main question">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-4"></div>
+            <div class="col-md-4 col-lg-4 text-center"><h2>常见问题</h2></div>
+            <div class="col-md-4 col-lg-4"></div>
+            <div class="col-md-1 col-lg-1"></div>
+            <div class="col-md-10 col-lg-10">
+                <div class="wpb_wrapper">
+                    <volist name="ques" id="vo">
+                        <h5 class="{:$key == 0 ? 'active' : '' }">
+                            <span class="accordion_mark left_mark"></span>
+                            <span class="tab-title">{$vo.title}</span>
+                        </h5>
+                        <div class="accordion_content">
+                            {$vo.content}
+                        </div>
+                    </volist>
+                </div>
+            </div>
+            <div class="col-md-1 col-lg-1"></div>
+        </div>
+    </div>
+</div>
+<include file="Public:footer" />
+<script src="__RES__/js/question.js"></script>
+</body>
+</html>

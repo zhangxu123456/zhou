@@ -1,0 +1,326 @@
+<include file="Public:header" />
+<article class="header question">
+</article>
+<div class="main itemlist">
+    <div class="container">
+        <div class="row">
+            <include file="User:side" />
+            <div class="ct  w100">
+                <pre><h4>个人资料</h4></pre>
+                
+                <div class="alert alert-success hidden" role="alert">
+                    <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                    <div id="success">修改成功</div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label col-sm-2 " for="inputSuccess3">用户名：</label>
+                        <div class="col-sm-3 ">
+                            <span class="control-label col-sm-6"><h3 style="margin-top:0;line-height:16px;">{$infor.uname|default=''}</h3></span>
+
+                        </div>
+                    </div>
+                    
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label col-sm-2" for="inputGroupSuccess2">联系人姓名：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="name" name="name" value="{$infor.name|default=''}" aria-describedby="inputGroupSuccess2Status">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label col-sm-2" for="inputGroupSuccess2">联系人身份证：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="id_card" name="id_card" value="{$infor.id_card|default=''}" aria-describedby="inputGroupSuccess2Status">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label col-sm-2" for="inputGroupSuccess2">输入推荐人邀请码：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="referee_code" name="referee_code" value="{$infor.referee_code|default=''}" aria-describedby="inputGroupSuccess2Status">
+
+
+                        </div>
+                    </div>
+
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label col-sm-2" for="inputGroupSuccess2">邮箱：</label>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <span class="input-group-addon">@</span>
+                                <input type="text" class="form-control" id="email" name="email" value="{$infor.email|default=''}" aria-describedby="inputGroupSuccess2Status">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <link href="__PUBLIC__/css/select2.css" rel="stylesheet"/>
+                    <script type="text/javascript" src="__PUBLIC__/js/jquery.js" ></script>
+                    <script type="text/javascript" src="__PUBLIC__/js/area/area2.js"></script>
+                    <script type="text/javascript" src="__PUBLIC__/js/area/location.js"></script>
+                    <script type="text/javascript" src="__PUBLIC__/js/area/select2.js"></script>
+                    <script type="text/javascript" src="__PUBLIC__/js/area/select2_locale_zh-CN.js"></script>
+                    <p data-add="{$infor.loc_province},{$infor.loc_city},{$infor.loc_town}" class="namep"></p>
+
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label col-sm-2" for="inputGroupSuccess2">通信地址：</label>
+                        <div class="col-sm-8">
+                            <select id="loc_province" name="loc_province_ok" style="width:120px;"></select>&nbsp;&nbsp;
+                            <select id="loc_city" name="loc_city_ok" style="width:120px; margin-left: 10px"></select>&nbsp;&nbsp;
+                            <select id="loc_town" name="loc_town_ok"  style="width:120px;margin-left: 10px"></select>
+
+                            <input type="hidden" name="loc_province" id="loc_province_ok" >
+                            <input type="hidden" name="loc_city" id="loc_city_ok" >
+                            <input type="hidden" name="loc_town" id="loc_town_ok" >
+
+                            <!-- <input type="hidden" name="loc_province"> -->
+                            <!-- <input type="hidden" name="loc_city" > -->
+                            <!-- <input type="hidden" name="loc_town" > -->
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label col-sm-2" for="inputGroupSuccess2">具体地址：</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="address" name="address" value="{$infor.address|default=''}" aria-describedby="inputGroupSuccess2Status">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label col-sm-2" for="inputGroupSuccess2">电话：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="telephone" name="telephone" value="{$infor.telephone|default=''}" aria-describedby="inputGroupSuccess2Status">
+
+                        </div>
+                    </div>
+
+                    <!--上传省份证-->
+                        <style type="text/css">
+                            div.spot {
+                                        float: left;
+                                        margin: 0 20px 0 0;
+                                        width: 220px;
+                                        min-height: 160px;
+                                        border: 2px dashed #ddd;
+                                    }
+                                    .droparea {
+                                        position: relative;
+                                        text-align: center;
+                                    }
+                                    .droparea .instructions {
+                                        opacity: 0.8;
+                                        background-color: #cccccc;
+                                        height: 25px;
+                                        z-index: 10;
+                                        zoom: 1;
+                                        background-position: initial initial;
+                                        background-repeat: initial initial;
+                                        cursor: pointer;
+                                    }
+                                    .droparea div, .droparea input {
+                                        position: absolute;
+                                        top: 0;
+                                        width: 100%;
+                                        height: 100%; 
+                                    }
+                                    .droparea input {
+                                        cursor: pointer;
+                                        opacity: 0;
+                                    }
+                                    #uparea1,#uparea2,#uparea3,#uparea4{
+                                        height: 170px;
+                                        cursor: pointer;
+                                    }
+                        </style>
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <h3>上传证件</h3>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="droparea spot" id="image1" style="background-image: url('__ROOT__/uploads/image/regimage/{$infor.idcadeimage1}');background-size: 220px 160px;" >
+                                    <div class="instructions" onclick="del_image('1')">删除</div><div id="uparea1"></div>
+                                    <input type="hidden" name="idcadeimage1" id="image_1" value="{$infor.idcadeimage1}" />
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="droparea spot" id="image2" style="background-image: url('__ROOT__/uploads/image/regimage/{$infor.idcadeimage2}');background-size: 220px 160px;" >
+                                    <div class="instructions" onclick="del_image('2')">删除</div><div id="uparea2"></div>
+                                    <input type="hidden" name="idcadeimage2" id="image_2" value="{$infor.idcadeimage2}" />
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="droparea spot" id="image3" style="background-image: url('__ROOT__/uploads/image/regimage/{$infor.addressimage}');background-size: 220px 160px;" >
+                                    <div class="instructions" onclick="del_image('3')">删除</div><div id="uparea3"></div>
+                                    <input type="hidden" name="addressimage" id="image_3" value="{$infor.addressimage}" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <js href="__PUBLIC__/kindeditor/kindeditor.js,__PUBLIC__/kindeditor/lang/zh_CN.js"/>
+                        <script type="text/javascript">
+                            function del_image(num) {
+                                $('#image' + num).css('background-image', '');
+                                $('#image_' + num).val('');
+                            }
+                            $(function() {
+
+                                // var content;
+                                // KindEditor.ready(function(K) {
+                                //     content = K.create('#content', {
+                                //         allowFileManager: true,
+                                //         uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php?dirname=joinmessage'
+                                //     });
+                                // });
+
+                                KindEditor.ready(function(K) {
+                                    K.create();
+                                    var editor = K.editor({
+                                        allowFileManager: true,
+                                        uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php?dirname=regimage'
+                                    });
+                                    K('#uparea1').click(function() {
+                                        editor.loadPlugin('image', function() {
+                                            editor.plugin.imageDialog({
+                                                imageUrl: K('#image_1').val(),
+                                                clickFn: function(url, title, width, height, border, align) {
+                                                    $('#image1').css('background-image', 'url(' + url + ')').css('background-size', '220px 160px');
+                                                    K('#image_1').val(url);
+                                                    // K('#getImgUrl').val(url);
+                                                    editor.hideDialog();
+                                                }
+                                            });
+                                        });
+                                    });
+                                    K('#uparea2').click(function() {
+                                        editor.loadPlugin('image', function() {
+                                            editor.plugin.imageDialog({
+                                                imageUrl: K('#image_2').val(),
+                                                clickFn: function(url, title, width, height, border, align) {
+                                                    $('#image2').css('background-image', 'url(' + url + ')').css('background-size', '220px 160px');
+                                                    K('#image_2').val(url);
+                                                    // K('#getImgUrl').val(url);
+                                                    editor.hideDialog();
+                                                }
+                                            });
+                                        });
+                                    });
+                                    K('#uparea3').click(function() {
+                                        editor.loadPlugin('image', function() {
+                                            editor.plugin.imageDialog({
+                                                imageUrl: K('#image_3').val(),
+                                                clickFn: function(url, title, width, height, border, align) {
+                                                    $('#image3').css('background-image', 'url(' + url + ')').css('background-size', '220px 160px');
+                                                    K('#image_3').val(url);
+                                                    // K('#getImgUrl').val(url);
+                                                    editor.hideDialog();
+                                                }
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        </script>
+
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4 text-center"><button class="btn btn-primary" id="btnQuery" type="submit">确认提交</button></div>
+                        <div class="col-lg-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="top">
+        <ul class="clearfix">
+            <li><a href="">关于我们</a><span>|</span></li>
+            <li><a href="">产品中心</a><span>|</span></li>
+            <li><a href="">动态专栏</a><span>|</span></li>
+            <li><a href="">联系我们</a><span>|</span></li>
+            <li><a href="">友情链接</a></li>
+        </ul>
+        <p>
+            <span>上海</span>
+            <span>无锡</span>
+            <span>济南</span>
+            <span>武汉</span>
+            <span>广州</span>
+        </p>
+    </div>
+    <div class="center">
+        <img src="__RES__/images/senmous-img.jpg" alt="">
+    </div>
+    <div class="bootom">
+        © 2015 NEXTEV LIMITED All Rights Reserved 沪ICP备15026264号-1
+    </div>
+</div>
+<!-- <script src="__RES__/js/jquery.min.js"></script>     -->
+<!-- <script src="__RES__/js/bootstrap.js"></script> -->
+<!-- <script src="__RES__/js/main.js"></script> -->
+
+
+
+<script type="text/javascript">
+    $('#btnQuery').click(function(){
+
+            var select2_chosen_1=$('#select2-chosen-1').html(); //省份
+            var select2_chosen_2=$('#select2-chosen-2').html(); //城市
+            var select2_chosen_3=$('#select2-chosen-3').html(); //区县
+
+            $('#loc_province_ok').val(select2_chosen_1);
+            $('#loc_city_ok').val(select2_chosen_2);
+            $('#loc_town_ok').val(select2_chosen_3);
+        $.ajax({
+            url: '{$action}',
+            type: 'post',
+            data: $('input[type=\'text\'],input[type=\'hidden\']'),
+            dataType: 'json',
+            beforeSend: function() {
+                console.log(111)
+                $('#btnQuery').attr('disabled', true);
+                $('#btnQuery').after('<div class="modal_loading"><span class="wait">&nbsp;<img src="__IMG__/loading2.gif" alt="" /></span></div>');
+            },  
+            complete: function() {
+                $('#btnQuery').attr('disabled', false);
+                $('.modal_loading').remove();
+            },          
+            success: function(json) {
+                $('.warning, .error').remove();
+                        
+                if (json['redirect']) {     
+                    $('.alert-success').removeClass('hidden');
+                    setTimeout(function(){
+                        location = json['redirect']
+                    },2000);                
+                } else if (json['error']) {     
+                                
+                    /*if (json['error']['email']) {
+                        $("input[name='email']").after('<span class="error">' + json['error']['email'] + '</span>');
+                    }                           
+                    
+                    if (json['error']['telephone']) {
+                        $("input[name='telephone']").after('<span class="error">' + json['error']['telephone'] + '</span>');
+                    }*/
+                                                                                                                                                
+                }  
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert('修改失败');
+            }
+        });     
+    });
+    $('.close').click(function(){
+            $(this).parent().addClass('hidden');
+        });
+</script>
+</body>
+</html>

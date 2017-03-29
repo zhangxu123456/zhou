@@ -1,0 +1,26 @@
+<include file="Public:header" />
+
+<article class="header question">
+</article>
+<div class="main container new_list">
+    
+    <div class="new_list_text">
+        <h2><span>{$nedetail.date}</span>{$nedetail.title}</h2>
+        <div class="new_list_img">
+            {$nedetail.content}
+        </div>
+    </div>
+    <nav aria-label="...">
+        <ul class="pager">
+            <volist name="front" id="vo">
+                <li class="previous"><a href="{:U('/newsdetail/'.$vo['news_id'])}" title="{$vo.title}"><span aria-hidden="true">&larr;</span> 上一篇</a></li>
+            </volist>
+            <volist name="next" id="vo">
+                <li class="next"><a href="{:U('/newsdetail/'.$vo['news_id'])}" title="{$vo.title}">下一篇 <span aria-hidden="true">&rarr;</span></a></li>
+            </volist>
+        </ul>
+    </nav>
+</div>
+<include file="Public:footer" />
+</body>
+</html>

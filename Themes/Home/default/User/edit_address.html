@@ -1,0 +1,129 @@
+<include file="Public:header" />
+
+  <script src="__PUBLIC__/js/jquery/jquery-1.10.2.min.js"></script>
+  <script src="__PUBLIC__/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+  <script src="__PUBLIC__/bt/js/bootstrap.min.js"></script>
+<article class="header question">
+</article>
+<div class="main itemlist">
+    <div class="container">
+        <div class="row">
+            <include file="User:side" />
+            <div class="ct  w100">
+                <pre><h4>{$action_title}</h4></pre>
+                <div class="form-horizontal" style="width:60%;margin:0 auto;">
+                	<fieldset>
+						 <notempty name="Think.get.id">
+							<input name="address_id" type="hidden" value="{$Think.get.id}" />
+						</notempty>
+						<div class="form-group required clearfix">
+							<label class="col-sm-2 control-label">收货人:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control"  value="{$address.name|default=''}" name="name">
+							</div>
+						</div>
+						<div class="form-group required clearfix">
+							<label class="col-sm-2 control-label">联系电话:</label>
+							<div class="col-sm-5">
+								<input type="text"  class="form-control" value="{$address.telephone|default=''}" name="telephone">
+							</div>
+						</div>
+						<div class="form-group required clearfix">
+							<label class="col-sm-2 control-label">收货地址:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control"  value="{$address.address|default=''}" name="address">
+							</div>
+						</div>
+						<div class="form-group required clearfix">
+							<label class="col-sm-2 control-label">发票抬头:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control"  value="{$address.invoice|default=''}" name="invoice">
+							</div>
+						</div>
+					</fieldset>
+					<div class="buttons clearfix">
+						<div class="left" style="margin-left:15px;width:60%;text-align:center">
+							<button class="btn btn-primary " id="submit" type="submit">提交</button>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="top">
+        <ul class="clearfix">
+            <li><a href="">关于我们</a><span>|</span></li>
+            <li><a href="">产品中心</a><span>|</span></li>
+            <li><a href="">动态专栏</a><span>|</span></li>
+            <li><a href="">联系我们</a><span>|</span></li>
+            <li><a href="">友情链接</a></li>
+        </ul>
+        <p>
+            <span>上海</span>
+            <span>无锡</span>
+            <span>济南</span>
+            <span>武汉</span>
+            <span>广州</span>
+        </p>
+    </div>
+    <div class="center">
+        <img src="__RES__/images/senmous-img.jpg" alt="">
+    </div>
+    <div class="bootom">
+        © 2015 NEXTEV LIMITED All Rights Reserved 沪ICP备15026264号-1
+    </div>
+</div>
+<script type="text/javascript">
+	$('#submit').live('click', function() {
+		$.ajax({
+			url: '{$action}',
+			type: 'post',
+			data: $('input[type=\'text\'],input[type=\'hidden\']'),
+			dataType: 'json',
+			beforeSend: function() {
+				$('#submit').attr('disabled', true);
+				$('#submit').after('<span class="wait">&nbsp;<img src="__IMG__/loading.gif" alt="" /></span>');
+			},	
+			complete: function() {
+				$('#submit').attr('disabled', false); 
+				$('.wait').remove();
+			},			
+			success: function(json) {
+				$('.warning, .error').remove();
+						
+				if (json['redirect']) {		
+						
+					location = json['redirect'];
+					
+				} else if (json['error']) {		
+								
+					if (json['error']['name']) {
+						$("input[name='name']").after('<span class="error">' + json['error']['name'] + '</span>');
+					}							
+					
+					if (json['error']['telephone']) {
+						$("input[name='telephone']").after('<span class="error">' + json['error']['telephone'] + '</span>');
+					}				
+																			
+					if (json['error']['address']) {
+						$("input[name='address']").after('<span class="error">' + json['error']['address'] + '</span>');
+					}	
+					
+					if (json['error']['area']) {
+						$('#area').after('<span class="error">' + json['error']['area'] + '</span>');
+					}
+																																				
+				}  
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+			}
+		});	
+	});
+
+</script>
+
+</body>
+</html>

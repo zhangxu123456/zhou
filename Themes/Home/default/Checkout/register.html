@@ -1,0 +1,258 @@
+<div class="people" style="width:80%;margin:0 auto;">
+  <h2>我的个人信息</h2>
+    <ul class="clearfix">
+        <li class="col-sm-3"><h4 class="h5">用户名:</h4></li>
+        <li class="col-sm-5"><input type="text" name="uname" value="" class="form-control" /></li>
+        <li class="col-sm-4"></li>
+    </ul>
+    <ul class="clearfix">
+        <li class="col-sm-3"><h4 class="h5">联系人姓名:</h4></li>
+        <li class="col-sm-5"><input type="text" name="name" value="" class="form-control" /></li>
+        <li class="col-sm-4"></li>
+    </ul>
+    <ul class="clearfix">
+        <li class="col-sm-3"><h4 class="h5">联系人身份证:</h4></li>
+        <li class="col-sm-5"><input type="text" name="id_card" value="" class="form-control" /></li>
+        <li class="col-sm-4"></li>
+    </ul>
+    <ul class="clearfix">
+        <li class="col-sm-3"><h4 class="h5">输入推荐人邀请码:</h4></li>
+        <li class="col-sm-5"><input type="text" name="referee_code" value="" class="form-control" /></li>
+        <li class="col-sm-4"></li>
+    </ul>
+    <ul class="clearfix">
+        <li class="col-sm-3"><h4 class="h5">邮箱:</h4></li>
+        <li class="col-sm-5"><input type="text" name="email" value="" class="form-control" /></li>
+        <li class="col-sm-4"></li>
+    </ul>
+    <ul class="clearfix" style="padding:10px 0;">
+        <li class="col-sm-3"><h4 class="h5">居住地址:</h4></li>
+        <div class="o-intelligent-regName col-sm-9">
+            <li class="col-sm-4" style="padding-left:0"><select id="loc_province"  style="width:120px;"></select>&nbsp;&nbsp;</li>
+            <li class="col-sm-4"><select id="loc_city"  style="width:120px;"></select>&nbsp;&nbsp;</li>
+            <li class="col-sm-4"><select id="loc_town"  style="width:120px;"></select></li>
+            <input type="hidden" name="loc_province">
+            <input type="hidden" name="loc_city" >
+            <input type="hidden" name="loc_town" >
+        </div>
+    </ul>
+    <ul class="clearfix">
+        <li class="col-sm-3"><h4 class="h5">详细地址</h4></li>
+        <li class="col-sm-5"> <input type="text" name="address" value=""  class="form-control" /></li>
+        <li class="col-sm-4"></li>
+    </ul>
+    <ul class="clearfix">
+        <li class="col-sm-3"><h4 class="h5">手机号:</h4></li>
+        <li class="col-sm-5"><input type="text" name="telephone" value="" id="regName" class="form-control" /></li>
+        <li class="col-sm-4"></li>
+    </ul>
+
+  <script type="text/javascript">
+    function get_mobile_code(){
+          <?php 
+                if(!$_SESSION['send_code']){
+                   $_SESSION['send_code']='true';
+                }
+          ?>
+        $.post("{:U('Public/sms')}", {mobile:jQuery.trim($('#regName').val()),send_code:<?php echo $_SESSION['send_code'];  ?>}, 
+            function(msg) {
+            alert(jQuery.trim(unescape(msg)));
+            if(msg=='提交成功'){
+                RemainTime();
+            }
+        });
+    };
+
+    var iTime = 59;
+    var Account;
+    function RemainTime(){
+        document.getElementById('zphone').disabled = true;
+        var iSecond,sSecond="",sTime="";
+        if (iTime >= 0){
+            iSecond = parseInt(iTime%60);
+            iMinute = parseInt(iTime/60)
+            if (iSecond >= 0){
+                if(iMinute>0){
+                sSecond = iMinute + "分" + iSecond + "秒";
+            }else{
+                sSecond = iSecond + "秒后重新发送";
+            }
+        }
+            sTime=sSecond;
+            if(iTime==0){
+                clearTimeout(Account);
+                sTime='获取手机验证码';
+                iTime = 59;
+                document.getElementById('zphone').disabled = false;
+            }else{
+                Account = setTimeout("RemainTime()",1000);
+                iTime=iTime-1;
+            }
+        }else{
+            sTime='没有倒计时';
+        }
+        document.getElementById('zphone').value = sTime;
+    } 
+</script>
+
+  <div class="password_form clearfix">
+      <ul class="clearfix">
+          <li class="col-sm-3"><h4 class="h5">密码:</h4></li>
+          <li class="col-sm-5"><input type="password" name="password" value="" class="form-control" /></li>
+          <li class="col-sm-4"></li>
+      </ul>
+      <ul>
+          <li class="col-sm-3"><h4 class="h5">确认密码:</h4></li>
+          <li class="col-sm-5"><input type="password" name="confirm" value="" class="form-control" /></li>
+          <li class="col-sm-4"></li>
+      </ul>
+  </div>
+    <ul class="clearfix">
+        <li class="col-sm-3"><h4 class="h5">验证码:</h4></li>
+        <li class="col-sm-2"><input type="text" class="form-control" name="mobile_code" id="securityCode"></li>
+        <li class="col-sm-3"><input class="btn btn-success" id="zphone" type="button" value=" 获取手机验证码 "  onclick="get_mobile_code();"></li>
+        <li class="col-sm-4"></li>
+    </ul>
+
+
+    <link href="__PUBLIC__/css/select2.css" rel="stylesheet"/>
+    <script src="__PUBLIC__/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/area/area.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/area/location.js"></script>
+    <script src="__PUBLIC__/js/area/select2.js"></script>
+    <script src="__PUBLIC__/js/area/select2_locale_zh-CN.js"></script>
+
+    <!--上传省份证-->
+    <style type="text/css">
+        div.spot {
+            float: left;
+            margin: 0 20px 0 0;
+            width: 150px;
+            min-height: 140px;
+            border: 2px dashed #ddd;
+        }
+        .droparea {
+            position: relative;
+            text-align: center;
+        }
+        .droparea .instructions {
+            opacity: 0.8;
+            background-color: #cccccc;
+            height: 25px;
+            z-index: 10;
+            zoom: 1;
+            background-position: initial initial;
+            background-repeat: initial initial;
+            cursor: pointer;
+        }
+        .droparea div, .droparea input {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .droparea input {
+            cursor: pointer;
+            opacity: 0;
+        }
+        #uparea1,#uparea2,#uparea3,#uparea4{
+            height: 140px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="row account_idcadeimage clearfix" style="padding:10px 0">
+        <div class="col-sm-2">
+            <h3>上传证件</h3>
+        </div>
+        <div class="col-sm-3">
+            <div class="droparea spot" id="image1" style="background-image: url('__UPLOAD__/image/regimage/{$info.idcadeimage1}');background-size: 220px 160px;" >
+                <div class="instructions" onclick="del_image('1')">删除</div><div id="uparea1"></div>
+                <input type="hidden" name="idcadeimage1" id="image_1" value="" />
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="droparea spot" id="image2" style="background-image: url('__UPLOAD__/image/regimage/{$info.idcadeimage2}');background-size: 220px 160px;" >
+                <div class="instructions" onclick="del_image('2')">删除</div><div id="uparea2"></div>
+                <input type="hidden" name="idcadeimage2" id="image_2" value="" />
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="droparea spot" id="image3" style="background-image: url('__UPLOAD__/image/regimage/{$info.addressimage}');background-size: 20px 160px;" >
+                <div class="instructions" onclick="del_image('3')">删除</div><div id="uparea3"></div>
+                <input type="hidden" name="addressimage" id="image_3" value="" />
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4 account_error"></div>
+    </div>
+    <js href="__PUBLIC__/kindeditor/kindeditor.js,__PUBLIC__/kindeditor/lang/zh_CN.js"/>
+    <script type="text/javascript">
+        function del_image(num) {
+            $('#image' + num).css('background-image', '');
+            $('#image_' + num).val('');
+        }
+        $(function() {
+            KindEditor.create();
+            var editor = KindEditor.editor({
+                allowFileManager: true,
+                uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php?dirname=regimage'
+            });
+            KindEditor('#uparea1').click(function() {
+                editor.loadPlugin('image', function() {
+                    editor.plugin.imageDialog({
+                        imageUrl: KindEditor('#image_1').val(),
+                        clickFn: function(url, title, width, height, border, align) {
+                            $('#image1').css('background-image', 'url(' + url + ')').css('background-size', '220px 160px');
+                            KindEditor('#image_1').val(url);
+                            // K('#getImgUrl').val(url);
+                            editor.hideDialog();
+                        }
+                    });
+                });
+            });
+            KindEditor('#uparea2').click(function() {
+                editor.loadPlugin('image', function() {
+                    editor.plugin.imageDialog({
+                        imageUrl: KindEditor('#image_2').val(),
+                        clickFn: function(url, title, width, height, border, align) {
+                            $('#image2').css('background-image', 'url(' + url + ')').css('background-size', '220px 160px');
+                            KindEditor('#image_2').val(url);
+                            // KindEditor('#getImgUrl').val(url);
+                            editor.hideDialog();
+                        }
+                    });
+                });
+            });
+            KindEditor('#uparea3').click(function() {
+                editor.loadPlugin('image', function() {
+                    editor.plugin.imageDialog({
+                        imageUrl: KindEditor('#image_3').val(),
+                        clickFn: function(url, title, width, height, border, align) {
+                            $('#image3').css('background-image', 'url(' + url + ')').css('background-size', '220px 160px');
+                            KindEditor('#image_3').val(url);
+                            // KindEditor('#getImgUrl').val(url);
+                            editor.hideDialog();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <ul class="clearfix" style="padding:10px 0;">
+        <li class="col-sm-3">用户注册协议</li>
+        <li class="col-sm-5"><input type="checkbox" id="isread" name="isread" value="1" checked="checked"><span>我已阅读并同意 <a href="javascript:void(0)">《用户注册协议》</a></span></li>
+    </ul>
+    <!-- id="button-register" -->
+    <ul class="clearfix">
+        <li class="col-sm-5"></li>
+        <li class="col-sm-3"><input type="button" value="点击注册" id="button-register"  class="btn btn-primary" /></li>
+    </ul>
+</div>
+
+
+
+
+
+
+

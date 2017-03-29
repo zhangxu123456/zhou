@@ -1,0 +1,122 @@
+<include file="Public:header" />
+<article class="header question">
+</article>
+<div class="main itemlist">
+    <div class="container">
+        <div class="row">
+            <include file="User:side" />
+            <div class="ct  w100">
+                <pre><h4>修改联系资料</h4></pre>
+                
+                <div class="alert alert-success hidden" role="alert">
+				    <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+				    <div id="success">修改成功</div>
+				</div>
+
+                <div class="form-horizontal">
+                    <div class="form-group has-success has-feedback">
+                        <label class="col-sm-2 control-label" for="input-password">电子邮箱</label>
+						<div class="col-sm-10">
+							<input id="email" class="form-control" type="text" name="email" value="{$account.email|default=''}" />
+						</div>
+                    </div>
+                    
+                    <div class="form-group has-success has-feedback">
+                        <label class="col-sm-2 control-label" for="input-password-1">手机号码</label>
+						<div class="col-sm-10">
+							<input id="tel" class="form-control" type="text" name="tel" value="{$account.telephone|default=''}" />
+						</div>
+                    </div>
+                    <div class="buttons clearfix">
+						<div class="left" style="margin-left:15px;">
+							<button class="button continue " type="submit">确认提交</button>
+						</div>
+					</div>
+                    <!-- <div class="row">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3">
+                            <button class="button btn-primary" id="btnQuery" type="submit">确认提交</button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="top">
+        <ul class="clearfix">
+            <li><a href="">关于我们</a><span>|</span></li>
+            <li><a href="">产品中心</a><span>|</span></li>
+            <li><a href="">动态专栏</a><span>|</span></li>
+            <li><a href="">联系我们</a><span>|</span></li>
+            <li><a href="">友情链接</a></li>
+        </ul>
+        <p>
+            <span>上海</span>
+            <span>无锡</span>
+            <span>济南</span>
+            <span>武汉</span>
+            <span>广州</span>
+        </p>
+    </div>
+    <div class="center">
+        <img src="__RES__/images/senmous-img.jpg" alt="">
+    </div>
+    <div class="bootom">
+        © 2015 NEXTEV LIMITED All Rights Reserved 沪ICP备15026264号-1
+    </div>
+</div>
+<script src="__RES__/js/jquery.min.js"></script>    
+<script src="__RES__/js/bootstrap.js"></script>
+<script src="__RES__/js/main.js"></script>
+
+<script type="text/javascript">
+$('.button').click(function(){
+	$.ajax({
+		url: '{$action}',
+		type: 'post',
+		data: $('input[type=\'text\']'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#submit').attr('disabled', true);
+			$('#submit').after('<span class="wait">&nbsp;<img src="__IMG__/loading2.gif" alt="" /></span>');
+		},	
+		complete: function() {
+			$('#submit').attr('disabled', false); 
+			$('.wait').remove();
+		},			
+		success: function(json) {
+			$('.warning, .error').remove();
+					
+			if (json['redirect']) {		
+				$('.alert-success').removeClass('hidden');
+				setTimeout(function(){
+					location = json['redirect']
+				},2000);				
+			} else if (json['error']) {		
+							
+				if (json['error']['email']) {
+					$("input[name='email']").after('<span class="error">' + json['error']['email'] + '</span>');
+				}							
+				
+				if (json['error']['tel']) {
+					$("input[name='tel']").after('<span class="error">' + json['error']['tel'] + '</span>');
+				}
+																																			
+			}  
+		},
+		error: function(xhr, ajaxOptions, thrownError) {
+			alert('修改失败');
+		}
+	});		
+});
+$('.close').click(function(){
+		$(this).parent().addClass('hidden');
+	});
+</script>	
+
+</body>
+</html>
